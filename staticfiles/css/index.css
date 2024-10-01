@@ -1,0 +1,35 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -10px; /* Negative margin to offset padding inside cards */
+}
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    width: calc(20% - 20px); /* Adjust width for 5 cards in a row */
+    box-sizing: border-box; /* Include border and padding in width calculation */
+}
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card-content {
+    padding: 10px;
+}
+.card-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.card-category {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.card-price {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}

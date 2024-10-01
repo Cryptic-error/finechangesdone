@@ -1,0 +1,35 @@
+<div class="container text-center my-3">
+    <div class="row mx-auto my-auto justify-content-center">
+        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                {% for product_batch in prod_batches %}
+                <!-- Loop through product batches, showing 3 products at a time in each slide -->
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <div class="row"style="height:400px; width: 100%;">
+                        {% for product in product_batch %}
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img"  style="height: 300px;">
+                                    <!-- Use .url if using Django ImageField -->
+                                    <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}" style="height: 250px; width: 100%;">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ product.product_name }}</h5>
+                                    <p class="card-text">{{ product.price }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <a class="carousel-control-prev bg-transparent" href="#productCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next bg-transparent" href="#productCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,2751 @@
+
+<!-- PRODUCT AREA START (product-item-3) -->
+{% for product, range, nslides in allprods %}
+<div class="ltn__product-area ltn__product-gutter  no-product-ratting pt-85 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title-area ltn__section-title-2 text-center">
+                    <h1 class="section-title">{{product.0.category}}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% comment %} <div class="col-lg-3">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-6">
+                        <div class="ltn__banner-item">
+                            <div class="ltn__banner-img">
+                                <a href="shop.html"><img src="/static/img/banner/11.jpg" alt="Banner Image"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-sm-6">
+                        <div class="ltn__banner-item">
+                            <div class="ltn__banner-img">
+                                <a href="shop.html"><img src="/static/img/banner/12.jpg" alt="Banner Image"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div> {% endcomment %}
+            </div>
+            <div class="col-lg-9">
+                <div class="row ltn__tab-product-slider-one-active--- slick-arrow-1">
+                    <!-- ltn__product-item -->
+                    <div class="col-lg-3--- col-md-4 col-sm-6 col-6">
+                        <div class="ltn__product-item ltn__product-item-2 text-left">
+                            <div class="product-img">
+                                <a href="product-details.html"><img src="/static/images/IMG_20240512_105513_1.jpg" alt="#"></a>
+                                <div class="product-badge">
+                                    <ul>
+                                        <li class="sale-badge">New</li>
+                                    </ul>
+                                </div>
+                                <div class="product-hover-action">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Add to Cart" data-bs-toggle="modal" data-bs-target="#add_to_cart_modal">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+                                                <i class="far fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="product-details.html">Antiseptic Spray</a></h2>
+                                <div class="product-price">
+                                    <span>$32.00</span>
+                                    <del>$46.00</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ltn__product-item -->
+                 {% for product.0 in product %}
+                    <div class="col-lg-3--- col-md-4 col-sm-6 col-6">
+                        <div class="ltn__product-item ltn__product-item-2 text-left">
+                            <div class="product-img">
+                                <a href="product-details.html"><img src="/static/images/IMG_20240512_105513_1.jpg" alt="#"></a>
+                                <div class="product-badge">
+                                    <ul>
+                                        <li class="sale-badge">New</li>
+                                    </ul>
+                                </div>
+                                <div class="product-hover-action">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Add to Cart" data-bs-toggle="modal" data-bs-target="#add_to_cart_modal">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+                                                <i class="far fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="product-details.html">{{product.0.product_name}}</a></h2>
+                                <div class="product-price">
+                                    <span>{{product.0.desc}}</span><br>
+                                    <span>{{product.0.price}}</span>
+                                    <del>$46.00</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+  </body>
+  
+
+{% endblock%}
+
+
+{% comment %} aakha ka aakha ka aakha ka  {% endcomment %}
+
+
+<div class="ltn__modal-area ltn__quick-view-modal-area">
+    <div class="modal fade" id="quick_view_modal" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        <!-- <i class="fas fa-times"></i> -->
+                    </button>
+                </div>
+                <div class="modal-body">
+                     <div class="ltn__quick-view-modal-inner">
+                         <div class="modal-product-item">
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <div class="modal-product-img">
+                                        <img src="img/product/4.png" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="modal-product-info">
+                                        <div class="product-ratting">
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                                <li><a href="#"><i class="far fa-star"></i></a></li>
+                                                <li class="review-total"> <a href="#"> ( 95 Reviews )</a></li>
+                                            </ul>
+                                        </div>
+                                        <h3><a href="product-details.html">Digital Stethoscope</a></h3>
+                                        <div class="product-price">
+                                            <span>$15.00</span>
+                                            <del>$25.00</del>
+                                        </div>
+                                        <hr>
+                                        <div class="modal-product-brief">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos repellendus repudiandae incidunt quidem pariatur expedita, quo quis modi tempore non.</p>
+                                        </div>
+                                        <div class="modal-product-meta ltn__product-details-menu-1 d-none">
+                                            <ul>
+                                                <li>
+                                                    <strong>Categories:</strong> 
+                                                    <span>
+                                                        <a href="#">Parts</a>
+                                                        <a href="#">Car</a>
+                                                        <a href="#">Seat</a>
+                                                        <a href="#">Cover</a>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="ltn__product-details-menu-2 d-none">
+                                            <ul>
+                                                <li>
+                                                    <div class="cart-plus-minus">
+                                                        <input type="text" value="02" name="qtybutton" class="cart-plus-minus-box">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="theme-btn-1 btn btn-effect-1" title="Add to Cart" data-bs-toggle="modal" data-bs-target="#add_to_cart_modal">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                        <span>ADD TO CART</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- <hr> -->
+                                        <div class="ltn__product-details-menu-3">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+                                                        <i class="far fa-heart"></i>
+                                                        <span>Add to Wishlist</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="" title="Compare" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                                                        <i class="fas fa-exchange-alt"></i>
+                                                        <span>Compare</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <hr>
+                                        <div class="ltn__social-media">
+                                            <ul>
+                                                <li>Share:</li>
+                                                <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                                                <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                                
+                                            </ul>
+                                        </div>
+                                        <label class="float-end mb-0"><a class="text-decoration" href="product-details.html"><small>View Details</small></a></label>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                     </div>
+                </div>
+
+
+                <li>
+                    <a  title="Add to Cart" data-bs-toggle="modal" data-bs-target="#add_to_cart_modal">
+                        <i id="pr{{ item.product_id }}" class="fas fa-shopping-cart cart"></i>
+                        
+                    </a>
+                </li>
+
+
+                javascript 
+
+
+
+                {% block js %}
+<script>
+console.log("working");
+if(localStorage.getItem(cart)==null){
+var cart ={};
+}
+else{
+    cart=JSON.parse(localStorage.getItem('cart'));
+}
+$('.cart').on('click', function(event){
+    console.log('clicked');
+    var idstr =String(this.id);
+    console.log(idstr);
+
+})
+</script>
+{% endblock %}
+
+
+
+{% comment %} checkl.html  {% endcomment %}
+
+{% extends "shop/basic.html" %}
+
+{% block cart%}
+
+<li>
+    <!-- mini-cart 2 -->
+    <div class="mini-cart-icon mini-cart-icon-2">
+        <a href="#ltn__utilize-cart-menu" class="ltn__utilize-toggle">
+            <span class="mini-cart-icon">
+                <i class="cart"></i>
+                <sup><span id = 'cart'>0</span></sup>
+            </span>
+            <h6><span>Your Cart</span> <span class="ltn__secondary-color">$89.25</span></h6>
+        </a>
+    </div>
+</li>
+
+{%endblock%}
+
+{% block body %}
+{% for product, range, nslides in allprods %}
+<div class="ltn__product-area ltn__product-gutter pt-115 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title-area ltn__section-title-2 text-center">
+                    <h1 class="section-title">{{product.0.category}}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row ltn__tab-product-slider-one-active--- slick-arrow-1">
+            <!-- ltn__product-item -->
+            
+            {% for item in product %}
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="ltn__product-item ltn__product-item-3 text-left">
+                    <div class="product-img">
+                        <a href="product-details.html"><img src="/static/images/IMG_20240512_105513_1.jpg" alt="#"></a>
+                        <div class="product-badge">
+                            <ul>
+                                <li class="sale-badge">New</li>
+                            </ul>
+                        </div>
+                        <div class="product-hover-action">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal{{ item.product_id }}">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="Add to Cart">
+                                    <i id="pr{{ item.product_id }}" class="fas fa-shopping-cart cart"></i>
+                                    </a>
+                                </li>
+                                <!-- Add other actions like add to cart, wishlist, etc. -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-ratting">
+                            <ul>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                <!-- Add product ratings -->
+                            </ul>
+                        </div>
+                        <h2 class="product-title"><a href="product-details.html">{{ item.product_name }}</a></h2>
+                        <div class="product-price">
+                            <span>{{ item.price }}</span>
+                            <!-- Add product price -->
+                            <del>{{ item.prev_price }}</del><br>
+                               <!-- Add product description -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Modals -->
+{% for product, range, nslides in allprods %}
+{% for item in product %}
+<div class="ltn__modal-area ltn__quick-view-modal-area">
+    <div class="modal fade" id="quick_view_modal{{ item.product_id }}" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="ltn__quick-view-modal-inner">
+                        <div class="modal-product-item">
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <div class="modal-product-img" id="modal_product_img">
+                                        <img src="{{ item.image.url }}" alt="{{ item.product_name }}">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="modal-product-info">
+                                        <div class="product-ratting">
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <!-- Add product ratings -->
+                                            </ul>
+                                        </div>
+                                        <h3 id="modal_product_title"><a href="product-details.html">{{ item.product_name }}</a></h3>
+                                        <div class="product-price" id="modal_product_price">
+                                            <span>{{ item.price }}</span>
+                                            <del>{{ item.prev_price }}</del>
+                                        </div>
+                                        <hr>
+                                        <div class="modal-product-brief" id="modal_product_desc">
+                                            <p>{{ item.desc }}</p>
+                                        </div>
+                                        <!-- other modal elements can be updated similarly if needed -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endfor %}
+
+{% comment %} {% block js %}  {% endcomment %}
+<script>
+    {% comment %} console.log("working"); {% endcomment %}
+    if (localStorage.getItem('cart') == null) {
+        console.log('null');
+        var cart = {};
+    } else {
+        cart = JSON.parse(localStorage.getItem('cart'));
+        updateCartTotal();
+    }
+
+    $('.cart').click(function () {
+        console.log('clicked');
+        var idstr = String(this.id);
+        console.log(idstr);
+        if (cart[idstr] != undefined) {
+            cart[idstr] = cart[idstr] + 1;
+        } else {
+            cart[idstr] = 1;
+        }
+        console.log(cart);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartTotal();
+    });
+
+    function updateCartTotal() {
+        var total = 0;
+        for (var key in cart) {
+            if (cart.hasOwnProperty(key)) {
+                total += cart[key];
+            }
+        }
+        // Display the total sum of values in the cart
+        document.getElementById('cart').innerHTML = total;
+    }
+</script>
+
+    {% comment %} {% endblock %} {% endcomment %}
+    
+    
+{% endblock %}
+
+
+ about code version 11111111
+
+
+
+
+ {% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fine Surgicel bio medical equipment supplier</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightcase/2.5.0/css/lightcase.min.css">
+
+    <!-- Place favicon.png in the root directory -->
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon" />
+    <!-- Font Icons css -->
+    <link rel="stylesheet" href="/static/css/font-icons.css">
+    <!-- plugins css -->
+    <link rel="stylesheet" href="/static/css/plugins.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="/static/css/responsive.css">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+<!-- Body main wrapper start -->
+<div class="body-wrapper">
+
+    <!-- HEADER AREA START (header-3) -->
+    <header class="ltn__header-area ltn__header-3">       
+        <!-- ltn__header-top-area start -->
+        <div class="ltn__header-top-area border-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="ltn__top-bar-menu">
+                            <ul>
+                                <li><a href="mailto:finesurgicalsales@gmail.com?Subject=Flower%20greetings%20to%20you"><i class="fa-solid fa-envelope"></i>service@finesurgical.com</a></li>
+                                <li><a href="locations.html"><i class="fa-solid fa-location-dot"></i></i>Ganesthan,Chabahil,kathmandu,Nepal</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="top-bar-right text-right text-end">
+                            <div class="ltn__top-bar-menu">
+                                <ul>
+                                                                                                                
+                                    <li>
+                                        <!-- ltn__social-media -->
+                                        <div class="ltn__social-media">
+                                            <ul>
+                                                <li><a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                                <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                                
+                                                <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ltn__header-top-area end --> 
+        <!-- ltn__header-middle-area start -->
+        <div class="ltn__header-middle-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="site-logo">
+                            <a href="index.html"><img src="/static/img/finesurgicalslogo.jpg" alt="Logo"width="150" height="100"></a>
+                        </div>
+                    </div>
+                    <div class="col header-contact-serarch-column d-none d-lg-block">
+                        <div class="header-contact-search">
+                            <!-- header-feature-item -->
+                            <div class="header-feature-item">
+                                <div class="header-feature-icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="header-feature-info">
+                                    <h6>Phone</h6>
+                                    <p><a href="tel:9851317338">9851317338</a></p>
+                                </div>
+                            </div>
+                            <!-- header-search-2 -->
+                            <div class="header-search-2">
+                                <form id="#123" method="get"  action="#">
+                                    <input type="text" name="search" value="" placeholder="Search here..."/>
+                                    <button type="submit">
+                                        <span><i class="fa-solid fa-search"></i></span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <!-- header-options -->
+                        <div class="ltn__header-options">
+                            <ul>
+                            
+                                <li class="d-lg-none">
+                                    <!-- header-search-1 -->
+                                    <div class="header-search-wrap">
+                                        <div class="header-search-1">
+                                            <div class="search-icon">
+                                                <i class="icon-search  for-search-show"></i>
+                                                <i class="icon-cancel  for-search-close"></i>
+                                            </div>
+                                        </div>
+                                        <div class="header-search-1-form">
+                                            <form id="#" method="get"  action="#">
+                                                <input type="text" name="search" value="" placeholder="Search here..."/>
+                                                <button type="submit">
+                                                    <span><i class="icon-search"></i></span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </li>
+                               
+                                <li>
+                                    <!-- mini-cart 2 -->
+                                    <div class="mini-cart-icon mini-cart-icon-2">
+                                        <a href="#ltn__utilize-cart-menu" class="ltn__utilize-toggle">
+                                            <span class="mini-cart-icon">
+                                                <i class="cart"></i>
+                                                <sup><span id ='cart'>0</span></sup>
+                                            </span>
+                                            <h6><span>Your Cart</span> <span class="ltn__secondary-color">$89.25</span></h6>
+                                        </a>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ltn__header-middle-area end -->
+        <!-- header-bottom-area start -->
+        <div class="header-bottom-area ltn__border-top ltn__header-sticky  ltn__sticky-bg-white--- ltn__sticky-bg-secondary ltn__secondary-bg section-bg-1 menu-color-white d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col header-menu-column justify-content-center">
+                        <div class="sticky-logo">
+                            <div class="site-logo">
+                                <a href="index.html"><img src="/static/img/finesurgicalslogo.jpg" alt="Logo"width="150" height="100"></a>
+                            </div>
+                        </div>
+                        <div class="header-menu header-menu-2">
+                            <nav>
+                                <div class="ltn__main-menu">
+                                    <ul>
+                                        <li class="menu-icon"><a href="#">Home</a>
+                                            
+                                        </li>
+                                        <li class="menu-icon"><a href="#">About</a>
+                                                                                </li>
+                                        <li class="menu-icon"><a href="#">Shop</a>
+                                            
+                                        </li>
+                                        <li class="menu-icon"><a href="#">News</a>
+
+                                        </li>
+                                        <li class="menu-icon"><a href="#">Pages</a>
+                                        </li>
+                                                
+                                                <li><a href="#">Shop Pages</a>
+
+                                                </li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header-bottom-area end -->
+    </header>
+    <!-- HEADER AREA END -->
+
+    <!-- MOBILE MENU START -->
+    <div class="mobile-header-menu-fullwidth mb-30 d-block d-lg-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Mobile Menu Button -->
+                    <div class="mobile-menu-toggle d-lg-none">
+                        <span>MENU</span>
+                        <a href="#ltn__utilize-mobile-menu" class="ltn__utilize-toggle">
+                            <svg viewBox="0 0 800 600">
+                                <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
+                                <path d="M300,320 L540,320" id="middle"></path>
+                                <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MOBILE MENU END -->
+
+   
+    <!-- Utilize Cart Menu End -->
+
+    <!-- Utilize Mobile Menu Start -->
+    <div id="ltn__utilize-mobile-menu" class="ltn__utilize ltn__utilize-mobile-menu">
+        <div class="ltn__utilize-menu-inner ltn__scrollbar">
+            <div class="ltn__utilize-menu-head">
+                <div class="site-logo">
+                    <a href="index.html"><img src="/static/img/logo.png" alt="Logo"></a>
+                </div>
+                <button class="ltn__utilize-close">×</button>
+            </div>
+            <div class="ltn__utilize-menu-search-form">
+                <form action="#">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="ltn__utilize-menu">
+                <ul>
+                    <li><a href="#">Home</a>
+                        <ul class="sub-menu">
+                            <li><a href="index.html">Home Style 01</a></li>
+                            <li><a href="index-2.html">Home Style 02</a></li>
+                            <li><a href="index-3.html">Home Style 03</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About</a>
+                        <ul class="sub-menu">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="service.html">Services</a></li>
+                            <li><a href="service-details.html">Service Details</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="portfolio-2.html">Portfolio - 02</a></li>
+                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="team-details.html">Team Details</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="locations.html">Google Map Locations</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Shop</a>
+                        <ul class="sub-menu">
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="shop-grid.html">Shop Grid</a></li>
+                            <li><a href="shop-left-sidebar.html">Shop Left sidebar</a></li>
+                            <li><a href="shop-right-sidebar.html">Shop right sidebar</a></li>
+                            <li><a href="product-details.html">Shop details </a></li>
+                            <li><a href="cart.html">Cart</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                            <li><a href="order-tracking.html">Order Tracking</a></li>
+                            <li><a href="account.html">My Account</a></li>
+                            <li><a href="login.html">Sign in</a></li>
+                            <li><a href="register.html">Register</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">News</a>
+                        <ul class="sub-menu">
+                            <li><a href="blog.html">News</a></li>
+                            <li><a href="blog-grid.html">News Grid</a></li>
+                            <li><a href="blog-left-sidebar.html">News Left sidebar</a></li>
+                            <li><a href="blog-right-sidebar.html">News Right sidebar</a></li>
+                            <li><a href="blog-details.html">News details</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Pages</a>
+                        <ul class="sub-menu">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="service.html">Services</a></li>
+                            <li><a href="service-details.html">Service Details</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="portfolio-2.html">Portfolio - 02</a></li>
+                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="team-details.html">Team Details</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="history.html">History</a></li>
+                            <li><a href="add-listing.html">Add Listing</a></li>
+                            <li><a href="locations.html">Google Map Locations</a></li>
+                            <li><a href="404.html">404</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="ltn__utilize-buttons ltn__utilize-buttons-2">
+                <ul>
+                    <li>
+                        <a href="account.html" title="My Account">
+                            <span class="utilize-btn-icon">
+                                <i class="far fa-user"></i>
+                            </span>
+                            My Account
+                        </a>
+                    </li>
+                    <li>
+                        <a href="wishlist.html" title="Wishlist">
+                            <span class="utilize-btn-icon">
+                                <i class="far fa-heart"></i>
+                                <sup>3</sup>
+                            </span>
+                            Wishlist
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cart.html" title="Shoping Cart">
+                            <span class="utilize-btn-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                                <sup>5</sup>
+                            </span>
+                            Shoping Cart
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ltn__social-media-2">
+                <ul>
+                    <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Utilize Mobile Menu End -->
+
+    <div class="ltn__utilize-overlay"></div>
+
+    <!-- BREADCRUMB AREA START -->
+    <div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image "  data-bs-bg="/static/img/bg/14.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ltn__breadcrumb-inner">
+                        <h1 class="page-title">About Us</h1>
+                        <div class="ltn__breadcrumb-list">
+                            <ul>
+                                <li><a href="index.html"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span> Home</a></li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BREADCRUMB AREA END -->
+
+    <!-- ABOUT US AREA START -->
+    <div class="ltn__about-us-area pt-25--- pb-120 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="about-us-img-wrap about-img-left">
+                        <img src="/static/img/others/9.png" alt="About Us Image">
+                    </div>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div class="about-us-info-wrap">
+                        <div class="section-title-area ltn__section-title-2--- mb-30">
+                            <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color d-none">About Us</h6>
+                            <h1 class="section-title">Your faithful partners for biomedical equipment</h1>
+                            <p>
+                                fine surgical is your Faithful Partners for Biomedical Equipment: Delivering Excellence 
+                                and Innovation to Support Your Medical Needs.</p>
+                        </div>
+                        <ul class="ltn__list-item-1 ltn__list-item-1-before--- clearfix">
+                            <li><i class="fas fa-check-square"></i> Better security for patient privacy and information.</li>
+                            <li><i class="fas fa-check-square"></i> More products at lower prices.</li>
+                            <li><i class="fas fa-check-square"></i> connect customers with the power of eCommerce at all.</li>
+                        </ul>
+                        <div class="about-author-info-2 border-top mt-30 pt-20">
+                            <ul>
+                                <li>
+                                    <div class="about-author-info-2-brief  d-flex">
+                                        <div class="author-img">
+                                        <img src="/static/img/blog/author.jpg" alt="#">
+                                        </div>
+                                        <div class="author-name-designation">
+                                            <h4 class="mb-0">Dr. Tirtha Shrestha</h4>
+                                            <small>Medical Specialist</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="about-author-info-2-contact  d-flex">
+                                        <div class="about-contact-icon d-flex align-self-center mr-10">
+                                            <i class="icon-call"></i>
+                                        </div>
+                                        <div class="about-author-info-2-contact-info">
+                                            <small>Get Support</small>
+                                            <h6 class="mb-0">9842029678</h6>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ABOUT US AREA END -->
+
+    <!-- COUNTDOWN AREA START -->
+    <div class="ltn__call-to-action-area section-bg-1 bg-image pt-120 pb-120" data-bs-bg="https://www.medicalimagingsource.com/wp-content/uploads/2020/07/ge-mri-3t-1024x768.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="call-to-action-inner text-color-white--- text-center---">
+                        <div class="section-title-area ltn__section-title-2--- text-center---">
+                            <h6 class="ltn__secondary-color">Todays Hot Offer</h6>
+                            <h1 class="section-title">MRI signa Excite Scanner<br>1.5 T GE</h1>
+                            <p>
+                                The 1.5T GE MRI Signa Excite Scanner is a high-performance imaging system known for its advanced capabilities and reliability. It features GE's Excite technology, which enhances image quality, speed, and patient comfort. Ideal for a wide range of clinical applications, this scanner delivers precise diagnostic results, making it a trusted choice for medical professionals.</p>
+                        </div>
+                        <div class="ltn__countdown ltn__countdown-3 bg-white--" data-countdown="2024/6/1"></div>
+                        <div class="btn-wrapper animated">
+                            <a href="contact.html" class="theme-btn-1 btn btn-effect-1 text-uppercase">Book Now</a>
+                            <a href="shop.html" class="ltn__secondary-color text-decoration-underline">Deal of The Day</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <!-- <img src="img/banner/15.png" alt="#"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- COUNTDOWN AREA END -->
+
+    <!-- FEATURE AREA START ( Feature - 6) -->
+    <div class="ltn__feature-area pt-90 pb-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2--- text-center">
+                        <h1 class="section-title">Core Features</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row ltn__custom-gutter">
+                <div class="col-lg-3 col-sm-6 col-12">
+                    <div class="ltn__feature-item ltn__feature-item-6 text-center">
+                        <div class="ltn__feature-icon">
+                            <!-- <span><i class="flaticon-apartment"></i></span> -->
+                            <img src="/static/img/icons/icon-img/24.png" alt="#">
+                        </div>
+                        <div class="ltn__feature-info">
+                            <h4><a href="service-details.html">Free Delivery</a></h4>
+                            <p>We offer free delivery if you use our partner kata ho for location services not only in kathmandu valley but all over nepal </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-12">
+                    <div class="ltn__feature-item ltn__feature-item-6 text-center active">
+                        <div class="ltn__feature-icon">
+                            <!-- <span><i class="flaticon-park"></i></span> -->
+                            <img src="/static/img/icons/icon-img/25.png" alt="#">
+                        </div>
+                        <div class="ltn__feature-info">
+                            <h4><a href="service-details.html">100% Cash Back</a></h4>
+                            <p>We offer 100% cash back if you dont like our product or if our product have any fault</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-12">
+                    <div class="ltn__feature-item ltn__feature-item-6 text-center">
+                        <div class="ltn__feature-icon">
+                            <!-- <span><i class="flaticon-maps-and-location"></i></span> -->
+                            <img src="/static/img/icons/icon-img/26.png" alt="#">
+                        </div>
+                        <div class="ltn__feature-info">
+                            <h4><a href="service-details.html">Quality Product</a></h4>
+                            <p>We are reputed to provide product of best quality in nepal.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-12">
+                    <div class="ltn__feature-item ltn__feature-item-6 text-center">
+                        <div class="ltn__feature-icon">
+                            <!-- <span><i class="flaticon-excavator"></i></span> -->
+                            <img src="/static/img/icons/icon-img/27.png" alt="#">
+                        </div>
+                        <div class="ltn__feature-info">
+                            <h4><a href="service-details.html">24/7 Support</a></h4>
+                            <p>we have our Partner that is well recognized as a company that maintain and service biomedical equipment  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FEATURE AREA END -->
+
+   
+    <!-- PROGRESS BAR AREA END -->
+
+   
+    <!-- COUNTER UP AREA END -->
+
+    <!-- TEAM AREA START (Team - 3) -->
+    <div class="ltn__team-area pt-115 pb-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2--- text-center">
+                        <h1 class="section-title">Our Expert Team</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="ltn__team-item ltn__team-item-3---">
+                        <div class="team-img">
+                            <img src="/static/img/gallery/abhay.jpg" alt="Image" width="600" height="360">
+                        </div>
+                        <div class="team-info">
+                            <h4><a href="team-details.html">Abhay Dhakal</a></h4>
+                            <h6 class="ltn__secondary-color">IT Specialist</h6>
+                            <div class="ltn__social-media">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="ltn__team-item ltn__team-item-3---">
+                        <div class="team-img">
+                            <img src="/static/img/team/2.jpg" alt="Image"width="600" height="360">
+                        </div>
+                        <div class="team-info">
+                            <h4><a href="team-details.html">Kelian Anderson</a></h4>
+                            <h6 class="ltn__secondary-color">Dentist</h6>
+                            <div class="ltn__social-media">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="ltn__team-item ltn__team-item-3---" width="600" height="360">
+                        <div class="team-img">
+                            <img src="/static/img/team/5.jpg" alt="Image">
+                        </div>
+                        <div class="team-info">
+                            <h4><a href="team-details.html">Miranda H. Halim</a></h4>
+                            <h6 class="ltn__secondary-color">Caardiologist</h6>
+                            <div class="ltn__social-media">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- TEAM AREA END -->
+
+    <!-- VIDEO AREA START -->
+    <div class="ltn__video-popup-area ltn__video-popup-margin">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ltn__video-bg-img ltn__video-popup-height-600 bg-overlay-black-10-- bg-image" data-bs-bg="/static/img/bg/15.jpg">
+                        <a class="ltn__video-icon-2 ltn__video-icon-2-border border-radius-no" href="https://www.youtube.com/embed/gX0uwFNvf5c?si=UxYkydmr9EtJYsu-?autoplay=1&showinfo=0" data-rel="lightcase:myCollection">
+                            <i class="fa fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- VIDEO AREA END -->
+
+    <!-- TESTIMONIAL AREA START (testimonial-4) -->
+    <div class="ltn__testimonial-area section-bg-1 pt-290 pb-70">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2 text-center">
+                        <h1 class="section-title">Clients Feedbacks<span>.</span></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row ltn__testimonial-slider-3-active slick-arrow-1 slick-arrow-1-inner">
+                <div class="col-lg-12">
+                    <div class="ltn__testimonial-item ltn__testimonial-item-4">
+                        <div class="ltn__testimoni-img">
+                            <img src="img/testimonial/6.jpg" alt="#">
+                        </div>
+                        <div class="ltn__testimoni-info">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <h4>Rosalina D. William</h4>
+                            <h6>Founder</h6>
+                        </div>
+                        <div class="ltn__testimoni-bg-icon">
+                            <i class="far fa-comments"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__testimonial-item ltn__testimonial-item-4">
+                        <div class="ltn__testimoni-img">
+                            <img src="img/testimonial/7.jpg" alt="#">
+                        </div>
+                        <div class="ltn__testimoni-info">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <h4>Rosalina D. William</h4>
+                            <h6>Founder</h6>
+                        </div>
+                        <div class="ltn__testimoni-bg-icon">
+                            <i class="far fa-comments"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__testimonial-item ltn__testimonial-item-4">
+                        <div class="ltn__testimoni-img">
+                            <img src="/static/img/testimonial/1.jpg" alt="#">
+                        </div>
+                        <div class="ltn__testimoni-info">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <h4>Rosalina D. William</h4>
+                            <h6>Founder</h6>
+                        </div>
+                        <div class="ltn__testimoni-bg-icon">
+                            <i class="far fa-comments"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__testimonial-item ltn__testimonial-item-4">
+                        <div class="ltn__testimoni-img">
+                            <img src="/static/img/testimonial/2.jpg" alt="#">
+                        </div>
+                        <div class="ltn__testimoni-info">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <h4>Rosalina D. William</h4>
+                            <h6>Founder</h6>
+                        </div>
+                        <div class="ltn__testimoni-bg-icon">
+                            <i class="far fa-comments"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__testimonial-item ltn__testimonial-item-4">
+                        <div class="ltn__testimoni-img">
+                            <img src="/static/img/testimonial/5.jpg" alt="#">
+                        </div>
+                        <div class="ltn__testimoni-info">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <h4>Rosalina D. William</h4>
+                            <h6>Founder</h6>
+                        </div>
+                        <div class="ltn__testimoni-bg-icon">
+                            <i class="far fa-comments"></i>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+            </div>
+        </div>
+    </div>
+    <!-- TESTIMONIAL AREA END -->
+
+    <!-- FAQ AREA START (faq-2) (ID > accordion_2) -->
+    <div class="ltn__faq-area pt-115 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2 text-center">
+                        <h1 class="section-title white-color---">Some Questions</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ltn__faq-inner ltn__faq-inner-2">
+                        <div id="accordion_2">
+                            <!-- card -->
+                            <div class="card">
+                                <h6 class="collapsed ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-2-1" aria-expanded="false">
+                                    How to buy a product?
+                                </h6>
+                                <div id="faq-item-2-1" class="collapse" data-bs-parent="#accordion_2">
+                                    <div class="card-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis. Proin libero nunc consequat interdum. Condimentum lacinia quis vel eros donec ac.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card -->
+                            <div class="card">
+                                <h6 class="ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-2-2" aria-expanded="true"> 
+                                    How can i make refund from your website?
+                                </h6>
+                                <div id="faq-item-2-2" class="collapse show" data-bs-parent="#accordion_2">
+                                    <div class="card-body">
+                                        <div class="ltn__video-img alignleft">
+                                            <img src="/static/img/bg/17.jpg" alt="video popup bg image">
+                                            <a class="ltn__video-icon-2 ltn__video-icon-2-small ltn__video-icon-2-border----" href="https://www.youtube.com/embed/lpyQhpksHRI?si=dLI3h4oHjyyt7QLG?autoplay=1&showinfo=0"  data-rel="lightcase:myCollection">
+                                                <i class="fa fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque </p>
+                                    </div>
+                                </div>
+                            </div>                          
+                            <!-- card -->
+                            <div class="card">
+                                <h6 class="collapsed ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-2-3" aria-expanded="false">
+                                    I am a new user. How should I start?
+                                </h6>
+                                <div id="faq-item-2-3" class="collapse" data-bs-parent="#accordion_2">
+                                    <div class="card-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis. Proin libero nunc consequat interdum. Condimentum lacinia quis vel eros donec ac.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card -->
+                            <div class="card">
+                                <h6 class="collapsed ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-2-4" aria-expanded="false">
+                                    Returns and refunds
+                                </h6>
+                                <div id="faq-item-2-4" class="collapse" data-bs-parent="#accordion_2">
+                                    <div class="card-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis. Proin libero nunc consequat interdum. Condimentum lacinia quis vel eros donec ac.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card -->
+                            <div class="card">
+                                <h6 class="collapsed ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-2-5" aria-expanded="false">
+                                    Are my details secured?
+                                </h6>
+                                <div id="faq-item-2-5" class="collapse" data-bs-parent="#accordion_2">
+                                    <div class="card-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis. Proin libero nunc consequat interdum. Condimentum lacinia quis vel eros donec ac.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <aside class="about-us-img-wrap about-img-right">
+                        <img src="/static/img/others/100.jpg" alt="Banner Image">
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQ AREA START -->
+
+    <!-- FEATURE AREA START ( Feature - 6) -->
+    <div class="ltn__feature-area section-bg-1 pt-115 pb-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2 text-center">
+                        <h6 class="section-subtitle ltn__secondary-color">//  features  //</h6>
+                        <h1 class="section-title">Why Choose Us<span>.</span></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="ltn__feature-item ltn__feature-item-7">
+                        <div class="ltn__feature-icon-title">
+                            <div class="ltn__feature-icon">
+                                <!-- <span><img src="img/icons/icon-img/21.png" alt="#"></span> -->
+                                <span><i class="fas fa-hand-holding-medical"></i> </span>
+                            </div>
+                            <h3><a href="service-details.html">All Kind Brand</a></h3>
+                        </div>
+                        <div class="ltn__feature-info">
+                            <p>we deliver you any brand you want for your lab setup faster than most of the supplier in nepal </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="ltn__feature-item ltn__feature-item-7">
+                        <div class="ltn__feature-icon-title">
+                            <div class="ltn__feature-icon">
+                                <!-- <span><img src="img/icons/icon-img/22.png" alt="#"></span> -->
+                                <span><i class="fas fa-microscope"></i> </span>
+                            </div>
+                            <h3><a href="service-details.html">Curated Products</a></h3>
+                        </div>
+                        <div class="ltn__feature-info">
+                            <p>Lorem ipsum dolor sit ame it, consectetur adipisicing elit, sed do eiusmod te mp or incididunt ut labore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="ltn__feature-item ltn__feature-item-7">
+                        <div class="ltn__feature-icon-title">
+                            <div class="ltn__feature-icon">
+                                <!-- <span><img src="img/icons/icon-img/23.png" alt="#"></span> -->
+                                <span><i class="fas fa-stethoscope"></i> </span>
+                            </div>
+                            <h3><a href="service-details.html">Pesticide Free Goods</a></h3>
+                        </div>
+                        <div class="ltn__feature-info">
+                            <p>Lorem ipsum dolor sit ame it, consectetur adipisicing elit, sed do eiusmod te mp or incididunt ut labore.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FEATURE AREA END -->
+    <!-- CALL TO ACTION START (call-to-action-6) -->
+    <div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom" data-bs-bg="/static/img/1.jpg--">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---">
+                        <div class="coll-to-info text-color-white">
+                            <h1>Buy bio-medical Product <br> For your own use or for lab setup</h1>
+                        </div>
+                        <div class="btn-wrapper">
+                            <a class="btn btn-effect-3 btn-white" href="shop.html">Explore Products <i class="icon-next"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CALL TO ACTION END -->
+
+    <!-- FOOTER AREA START -->
+    <footer class="ltn__footer-area  ">
+        <div class="footer-top-area  section-bg-2 plr--5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 col-sm-6 col-12">
+                        <div class="footer-widget footer-about-widget">
+                            <div class="footer-logo">
+                                <div class="site-logo">
+                                    <img src="/static/img/finesurgicalbg.jpg" alt="Logo">
+                                </div>
+                            </div>
+                            <p>Fine surgicals nepal is the Bio medical company that aims to provide quality biomedical product all over the nepal quicker and in low time cost</p>
+                            <div class="footer-address">
+                                <ul>
+                                    <li>
+                                        <div class="footer-address-icon">
+                                            <i class="icon-placeholder"></i>
+                                        </div>
+                                        <div class="footer-address-info">
+                                            <p>Ganesthan, Chabahil, Kathmandu</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="footer-address-icon">
+                                            <i class="icon-call"></i>
+                                        </div>
+                                        <div class="footer-address-info">
+                                            <p><a href="tel:+977 9851317338">+977 9851317338</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="footer-address-icon">
+                                            <i class="icon-mail"></i>
+                                        </div>
+                                        <div class="footer-address-info">
+                                            <p><a href="mailto:finesurgicalsales@gmail.com">finesurgicalsales@gmail.com</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ltn__social-media mt-20">
+                                <ul>
+                                    <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                                    <li><a href="#" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-sm-6 col-12">
+                        <div class="footer-widget footer-menu-widget clearfix">
+                            <h4 class="footer-title">Company</h4>
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="shop.html">All Products</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="contact.html">Contact us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-sm-6 col-12">
+                        <div class="footer-widget footer-menu-widget clearfix">
+                            <h4 class="footer-title">Services</h4>
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="about.html">Terms & Conditions</a></li>
+                                    <li><a href="about.html">Promotional Offers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-sm-6 col-12">
+                        <div class="footer-widget footer-menu-widget clearfix">
+                            <h4 class="footer-title">Customer Care</h4>
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="contact.html">Contact us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="ltn__copyright-area ltn__copyright-2 section-bg-7  plr--5">
+            <div class="container-fluid ltn__border-top-2">
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="ltn__copyright-design clearfix">
+                            <p>All Rights Reserved @Finesurgicalsnepal <span class="current-year"></span></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 align-self-center">
+                        <div class="ltn__copyright-menu text-end">
+                            <ul>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Claim</a></li>
+                                <li><a href="#">Privacy & Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER AREA END -->
+
+</div>
+<!-- Body main wrapper end -->
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader area end -->
+
+    <!-- All JS Plugins -->
+    <script src="/static/js/plugins.js"></script>
+    <!-- Main JS -->
+    <script src="/static/js/main.js"></script>
+  
+</body>
+</html>
+
+{% comment %} heres previous code of add to cart functtionality  {% endcomment %}
+{% extends "shop/basic.html" %}
+
+{% block cart%}
+
+<li>
+    <!-- mini-cart 2 -->
+    <div class="mini-cart-icon mini-cart-icon-2">
+        <a href="#ltn__utilize-cart-menu" class="ltn__utilize-toggle">
+            <span class="mini-cart-icon">
+                <i class="cart"></i>
+                <sup><span id = 'cart'>0</span></sup>
+            </span>
+            <h6><span>Your Cart</span> <span class="ltn__secondary-color">$89.25</span></h6>
+        </a>
+    </div>
+</li>
+
+{%endblock%}
+
+{% block body %}
+{% for product, range, nslides in allprods %}
+<div class="ltn__product-area ltn__product-gutter pt-115 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title-area ltn__section-title-2 text-center">
+                    <h1 class="section-title">{{product.0.category}}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row ltn__tab-product-slider-one-active--- slick-arrow-1">
+            <!-- ltn__product-item -->
+            
+            {% for item in product %}
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="ltn__product-item ltn__product-item-3 text-left">
+                    <div class="product-img">
+                        <a href="product-details.html"><img src="/static/images/IMG_20240512_105513_1.jpg" alt="#"></a>
+                        <div class="product-badge">
+                            <ul>
+                                <li class="sale-badge">New</li>
+                            </ul>
+                        </div>
+                        <div class="product-hover-action">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal{{ item.product_id }}">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="Add to Cart">
+                                    <i id="pr{{ item.product_id }}" class="fas fa-shopping-cart cart"></i>
+                                    </a>
+                                </li>
+                                <!-- Add other actions like add to cart, wishlist, etc. -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-ratting">
+                            <ul>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                <!-- Add product ratings -->
+                            </ul>
+                        </div>
+                        <h2 class="product-title"><a href="product-details.html">{{ item.product_name }}</a></h2>
+                        <div class="product-price">
+                            <span>{{ item.price }}</span>
+                            <!-- Add product price -->
+                            <del>{{ item.prev_price }}</del><br>
+                               <!-- Add product description -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Modals -->
+{% for product, range, nslides in allprods %}
+{% for item in product %}
+<div class="ltn__modal-area ltn__quick-view-modal-area">
+    <div class="modal fade" id="quick_view_modal{{ item.product_id }}" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="ltn__quick-view-modal-inner">
+                        <div class="modal-product-item">
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <div class="modal-product-img" id="modal_product_img">
+                                        <img src="{{ item.image.url }}" alt="{{ item.product_name }}">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="modal-product-info">
+                                        <div class="product-ratting">
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <!-- Add product ratings -->
+                                            </ul>
+                                        </div>
+                                        <h3 id="modal_product_title"><a href="product-details.html">{{ item.product_name }}</a></h3>
+                                        <div class="product-price" id="modal_product_price">
+                                            <span>{{ item.price }}</span>
+                                            <del>{{ item.prev_price }}</del>
+                                        </div>
+                                        <hr>
+                                        <div class="modal-product-brief" id="modal_product_desc">
+                                            <p>{{ item.desc }}</p>
+                                        </div>
+                                        <!-- other modal elements can be updated similarly if needed -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endfor %}
+
+
+{% block cartmenu %}
+<div id="ltn__utilize-cart-menu" class="ltn__utilize ltn__utilize-cart-menu">
+    <div class="ltn__utilize-menu-inner ltn__scrollbar">
+        <div class="ltn__utilize-menu-head">
+            <span class="ltn__utilize-menu-title">Cart</span>
+            <button class="ltn__utilize-close">×</button>
+        </div>
+        <div class="mini-cart-product-area ltn__scrollbar">
+            {% for product_id, quantity in cart.items %}
+            {% with product=product_id|get_product %}
+            <div class="mini-cart-item clearfix">
+                <div class="mini-cart-img">
+                    <a href="#"><img src="{{ product.image.url }}" alt="{{ product.product_name }}"></a>
+                    <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
+                </div>
+                <div class="mini-cart-info">
+                    <h6><a href="#">{{ product.product_name }}</a></h6>
+                    <span class="mini-cart-quantity">{{ quantity }} x ${{ product.price }}</span>
+                </div>
+            </div>
+            {% endwith %}
+            {% endfor %}
+        </div>
+        <div class="mini-cart-footer">
+            <div class="mini-cart-sub-total">
+                <h5>Total: <span>${{ total_price }}</span></h5>
+            </div>
+            <div class="btn-wrapper">
+                <a href="cart.html" class="theme-btn-1 btn btn-effect-1">View Cart</a>
+                <a href="cart.html" class="theme-btn-2 btn btn-effect-2">Checkout</a>
+            </div>
+            <p>Free Shipping on All Orders Over $100!</p>
+            <!-- Other footer content here -->
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+ <!-- Utilize Cart Menu Start -->
+ {% comment %} {% block cartmenu %} {% endcomment %}
+ {% comment %} <div id="ltn__utilize-cart-menu" class="ltn__utilize ltn__utilize-cart-menu">
+     <div class="ltn__utilize-menu-inner ltn__scrollbar">
+         <div class="ltn__utilize-menu-head">
+             <span class="ltn__utilize-menu-title">Cart</span>
+             <button class="ltn__utilize-close">×</button>
+         </div>
+         <div class="mini-cart-product-area ltn__scrollbar">
+             <div class="mini-cart-item clearfix">
+                 <div class="mini-cart-img">
+                     <a href="#"><img src="img/product/1.png" alt="Image"></a>
+                     <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
+                 </div>
+                 <div class="mini-cart-info">
+                     <h6><a href="#">Antiseptic Spray</a></h6>
+                     <span class="mini-cart-quantity">1 x $65.00</span>
+                 </div>
+             </div>
+             
+         <div class="mini-cart-footer">
+             <div class="mini-cart-sub-total">
+                 <h5>Subtotal: <span>$310.00</span></h5>
+             </div>
+             <div class="btn-wrapper">
+                 <a href="cart.html" class="theme-btn-1 btn btn-effect-1">View Cart</a>
+                 <a href="cart.html" class="theme-btn-2 btn btn-effect-2">Checkout</a>
+             </div>
+             <p>Free Shipping on All Orders Over $100!</p>
+         </div>
+
+     </div>
+ </div> {% endcomment %}
+ <!-- Utilize Cart Menu End -->
+ {% comment %} {%endblock%} {% endcomment %}
+
+{% comment %} {% block js %}  {% endcomment %}
+<script>
+    {% comment %} console.log("working"); {% endcomment %}
+    if (localStorage.getItem('cart') == null) {
+        console.log('null');
+        var cart = {};
+    } else {
+        cart = JSON.parse(localStorage.getItem('cart'));
+        updateCartTotal();
+    }
+
+    $('.cart').click(function () {
+        console.log('clicked');
+        var idstr = String(this.id);
+        console.log(idstr);
+        if (cart[idstr] != undefined) {
+            cart[idstr] = cart[idstr] + 1;
+        } else {
+            cart[idstr] = 1;
+        }
+        console.log(cart);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartTotal();
+    });
+
+    function updateCartTotal() {
+        var total = 0;
+        for (var key in cart) {
+            if (cart.hasOwnProperty(key)) {
+                total += cart[key];
+            }
+        }
+        // Display the total sum of values in the cart
+        document.getElementById('cart').innerHTML = total;
+    }
+</script>
+
+    {% comment %} {% endblock %} {% endcomment %}
+    
+    
+{% endblock %}
+
+
+
+
+{% comment %} update cart  {% endcomment %}
+function updateCart(cart) {
+    for(var item in cart){
+        document.getElementById('div'+item).innerHTML = "<button id='minus"+item+"' class='btn btn-primary minus'>- </button> 
+        <span id='val"+item+"'>"+cart[item]+"</span> <button id='plus"+item+"' class='btn btn-primary minus\'>- </button>";
+    }
+}
+
+
+
+
+
+{% comment %} js code to update product cart before applying dispplaying items selected  {% endcomment %}
+
+<script>
+    {% comment %} console.log("working"); {% endcomment %}
+    if (localStorage.getItem('cart') == null) {
+        console.log('null');
+        var cart = {};
+    } else {
+        cart = JSON.parse(localStorage.getItem('cart'));
+        updateCartTotal();
+    }
+
+    $('.cart').click(function () {
+        console.log('clicked');
+        var idstr = String(this.id);
+        console.log(idstr);
+        if (cart[idstr] != undefined) {
+            cart[idstr] = cart[idstr] + 1;
+        } else {
+            cart[idstr] = 1;
+        }
+        console.log(cart);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartTotal();
+    });
+
+    // Assuming the container has an ID of "cartsubmenu"
+    var cartsubmenu = document.getElementById('cartsubmenu');
+
+    // Assuming cartContent is the HTML content you want to replace the block with
+    var cartContent = `
+        <div class="mini-cart-item clearfix">
+            <div class="mini-cart-img">
+                <a href="#"><img src="img/product/1.png" alt="Image"></a>
+                <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
+            </div>
+            <div class="mini-cart-info">
+                <h6 id="cartname"><a href="#">Hello</a></h6>
+                <span class="mini-cart-quantity">1 x $65.00</span>
+            </div>
+        </div>
+    `;
+
+    // Set the inner HTML of the cart menu container to the new content
+    cartsubmenu.innerHTML = cartContent;
+
+    function updateCartTotal() {
+        var total = 0;
+        for (var key in cart) {
+            if (cart.hasOwnProperty(key)) {
+                total += cart[key];
+            }
+        }
+        // Display the total sum of values in the cart
+        document.getElementById('cart').innerHTML = total;
+    }
+</script>
+ 
+
+var priceElement = document.getElementById('namepr{{ item.product_id }}');
+
+
+<script>
+    {% comment %} console.log("working"); {% endcomment %}
+    if (localStorage.getItem('cart') == null) {
+        console.log('null');
+        var cart = {};
+    } else {
+        cart = JSON.parse(localStorage.getItem('cart'));
+        updateCartTotal();
+    }
+
+    $('.cart').click(function () {
+        console.log('clicked');
+        var idstr = String(this.id);
+        console.log(idstr);
+        if (cart[idstr] != undefined) {
+            cart[idstr] = cart[idstr] + 1;
+        } else {
+            cart[idstr] = 1;
+        }
+        console.log(cart);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartTotal();
+    });
+
+    function updateCartTotal() {
+        var total = 0;
+        for (var key in cart) {
+            if (cart.hasOwnProperty(key)) {
+                total += cart[key];
+            }
+        }
+        // Display the total sum of values in the cart
+        document.getElementById('cart').innerHTML = total;
+// Loop through each product item
+{% for product, range, nslides in allprods %}
+{% for item in product %}
+    // Example: Access product name
+    var productName = "{{ item.product_name }}";
+    console.log('Product Name:', productName);
+
+    // Example: Access product price
+    var productId = "{{ item.product_id }}";
+    var productPrice = "{{ item.price }}";
+    console.log('Product Price:', productPrice);
+
+    // Example: Access product description
+    var productDesc = "{{ item.desc }}";
+    console.log('Product Description:', productDesc);
+
+    // Example: Update a specific element (e.g., price)
+    var priceElement = document.getElementById('namepr{{ item.product_id }}');
+    if (priceElement) {
+        priceElement.textContent = productName + ' - $' + productPrice; // Update text content
+    }
+
+{% endfor %}
+{% endfor %}
+
+        // Display cart items
+        var cartContent = '';
+        for (var keys in cart) {
+            if (cart.hasOwnProperty(keys)) {
+                cartContent += `
+                    <div class="mini-cart-item clearfix">
+                        <div class="mini-cart-img">
+                            <a href="#"><img src="/static/img/product/${keys}.jpg" alt="Image"></a>
+                            <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
+                        </div>
+                        <div class="mini-cart-info">
+                            <h6 id="cartname"><a href="#">${productName}</a></h6>
+                            <span class="mini-cart-quantity">${cart[keys]} x ${productPrice}</span>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+        
+        // Assuming the container has an ID of "cartsubmenu"
+        var cartsubmenu = document.getElementById('cartsubmenu');
+        // Set the inner HTML of the cart menu container to the new content
+        cartsubmenu.innerHTML = cartContent;
+    }
+    
+</script>
+
+
+
+
+{% comment %} full js code after check out and quotation generation code  {% endcomment %}
+
+
+{% block js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader area end -->
+
+    <!-- All JS Plugins -->
+    <script src="/static/js/plugins.js"></script>
+    <!-- Main JS -->
+    <script src="/static/js/main.js"></script>
+    <script>
+        // Initialize cart from localStorage or create new if empty
+        var cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : {};
+      
+        $(document).ready(function() {
+            $('.add-to-cart').click(function () {
+                var idstr = $(this).data('product');  // Product ID
+                var name = $(this).data('name');      // Product Name
+                var price = parseFloat($(this).data('price'));  // Product Price
+                var imageUrl = $(this).data('image-url');
+                var description = $(this).data('desc'); // Assuming description is available as a data attribute
+      
+                // Update cart with product details
+                if (cart[idstr] !== undefined) {
+                    // Product already exists in cart, increment quantity
+                    cart[idstr].quantity += 1;
+                } else {
+                    // Add new product to cart
+                    cart[idstr] = {
+                        name: name,
+                        price: price,
+                        quantity: 1,
+                        image_url: imageUrl,
+                        desc: description
+                    };
+                }
+      
+                // Update localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+      
+                // Update UI
+                updateCartTotal();
+            });
+      
+            // Function to update cart total and display
+            function updateCartTotal() {
+                var totalItems = 0;
+                var totalAmount = 0; // Variable to store total amount in cart
+                var cartContent = '';
+      
+                // Calculate total items and generate cart content HTML
+                for (var key in cart) {
+                    if (cart.hasOwnProperty(key)) {
+                        totalItems += cart[key].quantity;
+            
+                        // Calculate total amount for this product
+                        var subtotal = cart[key].quantity * cart[key].price;
+                        totalAmount += subtotal;
+            
+                        cartContent += `
+                            <div class="mini-cart-item clearfix">
+                                <div class="mini-cart-img">
+                                    <a href="#"><img src="${cart[key].image_url}" alt="Image"></a>
+                                    <span class="mini-cart-item-delete" data-product="${key}"><i class="icon-cancel"></i></span>
+                                </div>
+                                <div class="mini-cart-info">
+                                    <h6><a href="#">${cart[key].name}</a></h6>
+                                    <span class="mini-cart-quantity">${cart[key].quantity} x ${cart[key].price} = ${subtotal.toFixed(2)}</span>
+                                </div>
+                            </div>
+                        `;
+                    }
+                }
+      
+                // Display total items in cart
+                document.getElementById('cart').innerHTML = totalItems;
+      
+                // Display cart items in the cart submenu container
+                var cartsubmenu = document.getElementById('cartsubmenu');
+                cartsubmenu.innerHTML = cartContent;
+      
+                var subtotalElement = document.getElementById('subtotal');
+                subtotalElement.textContent = totalAmount.toFixed(2);
+      
+                // Attach event listener to delete items from cart
+                $('.mini-cart-item-delete').click(function() {
+                    var productId = $(this).data('product');
+                    // Remove the item from cart
+                    delete cart[productId];
+                    // Update localStorage
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    // Update UI
+                    updateCartTotal();
+                });
+            }
+
+            function generateEmailContent(cart, userDetails) {
+                let subject = `Order Confirmation - Email: ${userDetails.email}, Phone: ${userDetails.phone}, Address: ${userDetails.address}, Delivery Time: ${userDetails.deliveryTime}`;
+                let body = `Hello,\n\nYour cart contains the following items:\n\n`;
+                for (let key in cart) {
+                    if (cart.hasOwnProperty(key)) {
+                        body += `${cart[key].quantity} x ${cart[key].name} at $${cart[key].price} each\n`;
+                    }
+                }
+                body += `\nTotal: $${Object.values(cart).reduce((sum, item) => sum + item.quantity * item.price, 0).toFixed(2)}\n\n`;
+                body += `Thank you for your purchase!\n\nBest regards,\nYour Company`;
+        
+                // Encode subject and body
+                subject = encodeURIComponent(subject);
+                body = encodeURIComponent(body);
+        
+                return `mailto:"Abhayadhakal456@gmail.com"?subject=${subject}&body=${body}`;
+            }
+        
+            // Event listener for checkout button
+            $('#checkoutButton').click(function (e) {
+                e.preventDefault();
+                $('#checkoutModal').modal('show');
+            });
+        
+            // Event listener for submit button in the modal
+            $('#submitCheckout').click(function (e) {
+                e.preventDefault();
+                let userEmail = $('#email').val();
+                let userPhone = $('#phone').val();
+                let userAddress = $('#address').val();
+                let userDeliveryTime = $('#deliveryTime').val();
+        
+                if (userEmail && userPhone && userAddress && userDeliveryTime) {
+                    let userDetails = {
+                        email: userEmail,
+                        phone: userPhone,
+                        address: userAddress,
+                        deliveryTime: userDeliveryTime
+                    };
+                    let mailtoLink = generateEmailContent(cart, userDetails);
+                    window.location.href = mailtoLink;
+                }
+            });
+      
+            // Function to generate PDF
+            function generatePDF() {
+                var { jsPDF } = window.jspdf;
+                var doc = new jsPDF();
+                var serialNumber = 1;
+            
+                var tableBody = [];
+                var promises = [];
+                var headerImage = '/static/img/header/fine_surgical.png'; // Replace with your header image path
+                var footerImage = '/static/img/header/fine_surgical.png'; // Replace with your footer image path
+            
+                for (var key in cart) {
+                    if (cart.hasOwnProperty(key)) {
+                        (function (key, serialNumber) {
+                            var item = cart[key];
+                            var row = [];
+            
+                            // Serial Number
+                            row.push(serialNumber);
+            
+                            // Create a promise to load the image
+                            var promise = new Promise(function (resolve, reject) {
+                                var img = new Image();
+                                img.src = item.image_url;
+                                img.crossOrigin = 'Anonymous'; // Handle CORS issues if the images are hosted on another domain
+            
+                                img.onload = function () {
+                                    var canvas = document.createElement('canvas');
+                                    canvas.width = img.width;
+                                    canvas.height = img.height;
+                                    var ctx = canvas.getContext('2d');
+                                    ctx.drawImage(img, 0, 0);
+                                    var imgData = canvas.toDataURL('image/PNG');
+                                    resolve(imgData);
+                                };
+            
+                                img.onerror = function () {
+                                    console.error("Error loading image for product ID " + key);
+                                    resolve(null); // Resolve with null if there's an error
+                                };
+                            });
+            
+                            promises.push(promise);
+            
+                            // Add product details (without image)
+                            row.push(''); // Placeholder for image
+                            row.push(item.name);
+                            row.push(item.desc);
+                            row.push(item.price.toFixed(2));
+                            row.push(item.quantity);
+            
+                            // Add amount (quantity * price)
+                            var amount = (item.price * item.quantity).toFixed(2);
+                            row.push(amount);
+            
+                            tableBody.push(row);
+                        })(key, serialNumber);
+            
+                        serialNumber++;
+                    }
+                }
+            
+                // Wait for all image promises to be resolved
+                Promise.all(promises).then(function (imageDataArray) {
+                    // Rebuild the tableBody with resolved image data
+                    for (var i = 0; i < tableBody.length; i++) {
+                        if (imageDataArray[i]) {
+                            tableBody[i][1] = { content: '', image: imageDataArray[i], width: 20, height: 20 };
+                        } else {
+                            tableBody[i][1] = 'Image not available';
+                        }
+                    }
+            
+                    var pageWidth = doc.internal.pageSize.width || doc.internal.pageSize.getWidth();
+                    var headerImageWidth = pageWidth * 0.9;
+            
+                    doc.autoTable({
+                        head: [['S.No', 'Image', 'Product Name', 'Description', 'Price', 'Quantity', 'Amount']],
+                        body: tableBody,
+                        didDrawCell: function (data) {
+                            if (data.column.index === 1 && data.cell.section === 'body' && data.cell.raw.image) {
+                                console.log("Adding image to PDF at cell:", data.row.index + 1);
+                                try {
+                                    // Calculate image height while maintaining aspect ratio
+                                    var imgHeight = (data.cell.raw.height / data.cell.raw.width) * 20;
+                                    doc.addImage(data.cell.raw.image, 'PNG', data.cell.x + 2, data.cell.y + 2, 16, imgHeight);
+                                } catch (error) {
+                                    console.error("Error adding image to PDF for cell:", data.row.index + 1, error);
+                                }
+                            }
+                        },
+                        styles: {
+                            cellPadding: 2,
+                            minCellHeight: 20,
+                        },
+
+                        rowPageBreak: 'auto',
+                        bodyStyles: { valign: 'top' },
+                        didDrawPage: function (data) {
+                            // Header
+                            var headerImageHeight = 20;
+                            doc.addImage(headerImage, 'PNG', (pageWidth - headerImageWidth) / 2, 10, headerImageWidth, headerImageHeight);
+                            
+                            // Footer
+                            var footerImageHeight = 20; // Fixed height for the footer image
+                            doc.addImage(footerImage, 'PNG', (pageWidth - headerImageWidth) / 2, doc.internal.pageSize.height - footerImageHeight - 10, headerImageWidth, footerImageHeight);
+                        }
+                    });
+            
+                    doc.save('cart.pdf');
+                }).catch(function (error) {
+                    console.error("Error generating PDF:", error);
+                });
+            }
+            
+            // Attach event listener to generate PDF button
+            $('#generate-pdf').click(function () {
+                generatePDF();
+            });
+            
+
+        
+        
+            // Initial call to updateCartTotal to populate cart on page load
+            updateCartTotal();
+        });
+            
+      </script>
+
+
+
+
+
+      before changing mobile mode 
+
+
+      {% extends "shop/basic.html" %}
+{% load product_filters %}
+
+
+<div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="checkoutModalLabel">Checkout Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone number</label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Delivery address</label>
+                        <input type="text" class="form-control" id="address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="deliveryTime">Expected delivery time</label>
+                        <input type="text" class="form-control" id="deliveryTime" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="submitCheckout">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% block cartbg-image %}
+
+<li>
+    <!-- mini-cart 2 -->
+    <div class="mini-cart-icon mini-cart-icon-2">
+        <a href="#ltn__utilize-cart-menu" class="ltn__utilize-toggle">
+            <span class="mini-cart-icon">
+                <i class="cart"></i>
+                <sup><span id="cart">{{ cart_total }}</span></sup>
+            </span>
+            <h6><span>Your Cart</span> <span class="ltn__secondary-color">$89.25</span></h6>
+        </a>
+    </div>
+</li>
+
+{% endblock %}
+
+{% block BREADCRUMB %}
+<div class="ltn__utilize-overlay"></div>
+
+<!-- BREADCRUMB AREA START -->
+<div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image "  data-bs-bg="/static/img/bg/biomedical.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ltn__breadcrumb-inner">
+                    <h1 class="page-title">Product</h1>
+                    <div class="ltn__breadcrumb-list">
+                        <ul>
+                            <li><a href="index.html"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span> Home</a></li>
+                            <li>Product</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block body %}
+{% for product, range, nslides in allprods %}
+<div class="ltn__product-area ltn__product-gutter pt-115 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title-area ltn__section-title-2 text-center">
+                    <h1 class="section-title">{{ product.0.category }}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row ltn__tab-product-slider-one-active--- slick-arrow-1">
+            <!-- ltn__product-item -->
+            {% for item in product %}
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="ltn__product-item ltn__product-item-3 text-left">
+                    <div class="product-img">
+                        <a href="product-details.html"><img src="{{ item.image.url }}" alt="{{ item.product_name }}" height="200"></a>
+                        <div class="product-badge">
+                            <ul>
+                                <li class="sale-badge">New</li>
+                            </ul>
+                        </div>
+                        <div class="product-hover-action">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal{{ item.product_id }}">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <span id="divpr{{ item.product_id }}"></span>
+                                    <a title="Add to Cart" class="add-to-cart" 
+                                       data-product="{{ item.product_id }}" 
+                                       data-name="{{ item.product_name }}" 
+                                       data-price="{{ item.price }}"
+                                       data-image-url="{{ item.image.url }}"
+                                       data-desc="{{ item.desc }}"> <!-- Add data-image-url attribute if necessary -->
+                                        <i id="pr{{ item.product_id }}" class="fas fa-shopping-cart cart"></i>
+                                    </a>
+                                </li>
+                                <!-- Add other actions like add to cart, wishlist, etc. -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-ratting">
+                            <ul>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                <!-- Add product ratings -->
+                            </ul>
+                        </div>
+                        <h2 class="product-title"><a href="product-details.html" id="namepr{{ item.product_id }}">{{ item.product_name }}</a></h2>
+                        <div class="product-price">
+                            <span>{{ item.price }}</span>
+                            <!-- Add product price -->
+                            <del>{{ item.prev_price }}</del><br>
+                            <!-- Add product description -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+
+
+
+<!-- Modals -->
+{% for product, range, nslides in allprods %}
+    {% for item in product %}
+        <div class="ltn__modal-area ltn__quick-view-modal-area">
+            <div class="modal fade" id="quick_view_modal{{ item.product_id }}" tabindex="-1">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="ltn__quick-view-modal-inner">
+                                <div class="modal-product-item">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-12">
+                                            <div class="modal-product-img" id="modal_product_img">
+                                                <img src="{{ item.image.url }}" alt="{{ item.product_name }}">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="modal-product-info">
+                                                <div class="product-ratting">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <!-- Add product ratings -->
+                                                    </ul>
+                                                </div>
+                                                <h3 id="namepr{{item.id}}"><a href="product-details.html">{{ item.product_name }}</a></h3>
+                                                <div class="product-price" id="modal_product_price">
+                                                    <span>{{ item.price }}</span>
+                                                    <del>{{ item.prev_price }}</del>
+                                                </div>
+                                                <hr>
+                                                <div class="modal-product-brief" id="modal_product_desc">
+                                                    <p>{{ item.desc }}</p>
+                                                </div>
+                                                <!-- other modal elements can be updated similarly if needed -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endfor %}
+{%endblock%}
+
+
+{% block cartmenu %}
+<div id="ltn__utilize-cart-menu" class="ltn__utilize ltn__utilize-cart-menu">
+    <div class="ltn__utilize-menu-inner ltn__scrollbar">
+        <div class="ltn__utilize-menu-head">
+            <span class="ltn__utilize-menu-title">Cart</span>
+            <button class="ltn__utilize-close">×</button>
+        </div>
+        
+        <div id="cartsubmenu" class="mini-cart-product-area ltn__scrollbar">
+            <!-- Cart items dynamically generated by JavaScript -->
+        </div>
+
+        <div class="mini-cart-footer">
+            <div class="mini-cart-sub-total">
+                <h5>Subtotal: <span id="subtotal">${{ total_price }}</span></h5>
+            </div>
+            <div class="btn-wrapper">
+                <a href="cart.html" class="theme-btn-1 btn btn-effect-1">View Cart</a>
+                <a id="checkoutButton" href="#" class="theme-btn-2 btn btn-effect-2">Checkout</a>
+                <button id="generate-pdf" class="theme-btn-2 btn btn-effect-2">Generate PDF</button>
+            </div>
+            <p>Faster delivery all over the Nepal</p>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
+   
+
+{% block js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader area end -->
+
+    <!-- All JS Plugins -->
+    <script src="/static/js/plugins.js"></script>
+    <!-- Main JS -->
+    <script src="/static/js/main.js"></script>
+    <script>
+        // Initialize cart from localStorage or create new if empty
+        var cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : {};
+      
+        $(document).ready(function() {
+            $('.add-to-cart').click(function () {
+                var idstr = $(this).data('product');  // Product ID
+                var name = $(this).data('name');      // Product Name
+                var price = parseFloat($(this).data('price'));  // Product Price
+                var imageUrl = $(this).data('image-url');
+                var description = $(this).data('desc'); // Assuming description is available as a data attribute
+      
+                // Update cart with product details
+                if (cart[idstr] !== undefined) {
+                    // Product already exists in cart, increment quantity
+                    cart[idstr].quantity += 1;
+                } else {
+                    // Add new product to cart
+                    cart[idstr] = {
+                        name: name,
+                        price: price,
+                        quantity: 1,
+                        image_url: imageUrl,
+                        desc: description
+                    };
+                }
+      
+                // Update localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+      
+                // Update UI
+                updateCartTotal();
+            });
+      
+            // Function to update cart total and display
+            function updateCartTotal() {
+                var totalItems = 0;
+                var totalAmount = 0; // Variable to store total amount in cart
+                var cartContent = '';
+      
+                // Calculate total items and generate cart content HTML
+                for (var key in cart) {
+                    if (cart.hasOwnProperty(key)) {
+                        totalItems += cart[key].quantity;
+            
+                        // Calculate total amount for this product
+                        var subtotal = cart[key].quantity * cart[key].price;
+                        totalAmount += subtotal;
+            
+                        cartContent += `
+                            <div class="mini-cart-item clearfix">
+                                <div class="mini-cart-img">
+                                    <a href="#"><img src="${cart[key].image_url}" alt="Image"></a>
+                                    <span class="mini-cart-item-delete" data-product="${key}"><i class="icon-cancel"></i></span>
+                                </div>
+                                <div class="mini-cart-info">
+                                    <h6><a href="#">${cart[key].name}</a></h6>
+                                    <span class="mini-cart-quantity">${cart[key].quantity} x ${cart[key].price} = ${subtotal.toFixed(2)}</span>
+                                </div>
+                            </div>
+                        `;
+                    }
+                }
+      
+                // Display total items in cart
+                document.getElementById('cart').innerHTML = totalItems;
+      
+                // Display cart items in the cart submenu container
+                var cartsubmenu = document.getElementById('cartsubmenu');
+                cartsubmenu.innerHTML = cartContent;
+      
+                var subtotalElement = document.getElementById('subtotal');
+                subtotalElement.textContent = totalAmount.toFixed(2);
+      
+                // Attach event listener to delete items from cart
+                $('.mini-cart-item-delete').click(function() {
+                    var productId = $(this).data('product');
+                    // Remove the item from cart
+                    delete cart[productId];
+                    // Update localStorage
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    // Update UI
+                    updateCartTotal();
+                });
+            }
+
+            function generateEmailContent(cart, userDetails) {
+                let subject = `Order Confirmation - Email: ${userDetails.email}, Phone: ${userDetails.phone}, Address: ${userDetails.address}, Delivery Time: ${userDetails.deliveryTime}`;
+                let body = `Hello,\n\nYour cart contains the following items:\n\n`;
+                for (let key in cart) {
+                    if (cart.hasOwnProperty(key)) {
+                        body += `${cart[key].quantity} x ${cart[key].name} at $${cart[key].price} each\n`;
+                    }
+                }
+                body += `\nTotal: $${Object.values(cart).reduce((sum, item) => sum + item.quantity * item.price, 0).toFixed(2)}\n\n`;
+                body += `Thank you for your purchase!\n\nBest regards,\nYour Company`;
+        
+                // Encode subject and body
+                subject = encodeURIComponent(subject);
+                body = encodeURIComponent(body);
+        
+                return `mailto:"Abhayadhakal456@gmail.com"?subject=${subject}&body=${body}`;
+            }
+        
+            // Event listener for checkout button
+            $('#checkoutButton').click(function (e) {
+                e.preventDefault();
+                $('#checkoutModal').modal('show');
+            });
+        
+            // Event listener for submit button in the modal
+            $('#submitCheckout').click(function (e) {
+                e.preventDefault();
+                let userEmail = $('#email').val();
+                let userPhone = $('#phone').val();
+                let userAddress = $('#address').val();
+                let userDeliveryTime = $('#deliveryTime').val();
+        
+                if (userEmail && userPhone && userAddress && userDeliveryTime) {
+                    let userDetails = {
+                        email: userEmail,
+                        phone: userPhone,
+                        address: userAddress,
+                        deliveryTime: userDeliveryTime
+                    };
+                    let mailtoLink = generateEmailContent(cart, userDetails);
+                    window.location.href = mailtoLink;
+                }
+            });
+      
+            // Function to generate PD
+            
+            
+
+        
+        
+            // Initial call to updateCartTotal to populate cart on page load
+            updateCartTotal();
+        });
+            
+      </script>
+      {% if user.is_superuser %}
+      <script>
+
+        function generatePDF() {
+            var { jsPDF } = window.jspdf;
+            var doc = new jsPDF();
+            var serialNumber = 1;
+        
+            var tableBody = [];
+            var promises = [];
+            var headerImage = '/static/img/header/fine_surgical.png'; // Replace with your header image path
+            var footerImage = '/static/img/header/footer.jpg'; // Replace with your footer image path
+        
+            for (var key in cart) {
+                if (cart.hasOwnProperty(key)) {
+                    (function (key, serialNumber) {
+                        var item = cart[key];
+                        var row = [];
+        
+                        // Serial Number
+                        row.push(serialNumber);
+        
+                        // Create a promise to load the image
+                        var promise = new Promise(function (resolve, reject) {
+                            var img = new Image();
+                            img.src = item.image_url;
+                            img.crossOrigin = 'Anonymous'; // Handle CORS issues if the images are hosted on another domain
+        
+                            img.onload = function () {
+                                var canvas = document.createElement('canvas');
+                                canvas.width = img.width;
+                                canvas.height = img.height;
+                                var ctx = canvas.getContext('2d');
+                                ctx.drawImage(img, 0, 0);
+                                var imgData = canvas.toDataURL('image/PNG');
+                                resolve(imgData);
+                            };
+        
+                            img.onerror = function () {
+                                console.error("Error loading image for product ID " + key);
+                                resolve(null); // Resolve with null if there's an error
+                            };
+                        });
+        
+                        promises.push(promise);
+        
+                        // Add product details (without image)
+                        row.push(''); // Placeholder for image
+                        row.push(item.name);
+                        row.push(item.desc);
+                        row.push(item.price.toFixed(2));
+                        row.push(item.quantity);
+        
+                        // Add amount (quantity * price)
+                        var amount = (item.price * item.quantity).toFixed(2);
+                        row.push(amount);
+        
+                        tableBody.push(row);
+                    })(key, serialNumber);
+        
+                    serialNumber++;
+                }
+            }
+        
+            // Wait for all image promises to be resolved
+            Promise.all(promises).then(function (imageDataArray) {
+                // Rebuild the tableBody with resolved image data
+                for (var i = 0; i < tableBody.length; i++) {
+                    if (imageDataArray[i]) {
+                        tableBody[i][1] = { content: '', image: imageDataArray[i], width: 20, height: 20 };
+                    } else {
+                        tableBody[i][1] = 'Image not available';
+                    }
+                }
+        
+                var pageWidth = doc.internal.pageSize.width || doc.internal.pageSize.getWidth();
+                var headerImageWidth = pageWidth * 0.9;
+                var headerImageHeight = 20; // Define header image height
+                var startY = headerImageHeight + 15; // Define starting Y position for the table to avoid overlapping
+        
+                doc.autoTable({
+                    head: [['S.No', 'Image', 'Product Name', 'Description', 'Price', 'Quantity', 'Amount']],
+                    body: tableBody,
+                    didDrawCell: function (data) {
+                        if (data.column && data.column.index === 1 && data.cell.section === 'body' && data.cell.raw && data.cell.raw.image) {
+                            console.log("Adding image to PDF at cell:", data.row.index + 1);
+                            try {
+                                // Calculate image height while maintaining aspect ratio
+                                var imgHeight = (data.cell.raw.height / data.cell.raw.width) * 28;
+                                doc.addImage(data.cell.raw.image, 'PNG', data.cell.x + 2, data.cell.y + 2, 26, imgHeight);
+                            } catch (error) {
+                                console.error("Error adding image to PDF for cell:", data.row.index + 1, error);
+                            }
+                        }
+                    },
+                    styles: {
+                        cellPadding: 2, // Adjust the padding inside each cell
+                        minCellHeight: 25, // Set minimum cell height for all cells
+                        head: {
+                            fontSize: 18, // Adjust the font size of the header cells
+                            fillColor: [0, 0, 255], // Set the background color of header cells to RGB(0, 0, 255)
+                        }
+                    },
+                    didParseCell: function (data) {
+                        if (data.column.index === 3) { // Check if the column is "Description"
+                            var textHeight = doc.getTextDimensions(data.cell.raw).h;
+                            data.cell.styles.minCellHeight = Math.max(data.cell.styles.minCellHeight, textHeight + 5); // Adjust row height based on text height
+                        }
+                    },
+                    columnStyles: {
+                        1: { cellWidth: 30 } // Set the width of the image column
+                    },
+                    rowPageBreak: 'auto',
+                    bodyStyles: { valign: 'top' },
+                    startY: startY, // Start the table after the header image
+                    headStyles: {
+                        fontSize: 12, // Adjust the font size for the table header
+                        cellPadding: 2,
+                        fillColor: [0, 123, 255],
+                        minCellHeight: 15,
+                    },
+                    didDrawPage: function (data) {
+                        // Header
+                        doc.addImage(headerImage, 'PNG', (pageWidth - headerImageWidth) / 2, 10, headerImageWidth, headerImageHeight);
+                        
+                        // Footer
+                        var footerImageHeight = 50; // Fixed height for the footer image
+                        var footerImageWidth = 55; // Fixed width for the footer image
+                        var marginRight = 10; // Margin from the right side of the page
+                        var xPosition = marginRight;
+                        var yPosition = doc.internal.pageSize.height - footerImageHeight - 10;
+                        doc.addImage(footerImage, 'PNG', xPosition, yPosition, footerImageWidth, footerImageHeight);
+                    }
+                    
+                });
+        
+                doc.save('cart.pdf');
+            }).catch(function (error) {
+                console.error("Error generating PDF:", error);
+            });
+        }
+        
+        // Attach event listener to generate PDF button
+        $('#generate-pdf').click(function () {
+            generatePDF();
+        });
+
+
+
+      </script>
+
+      {% else %}
+      <script>console.log("you aint admin bro")</script>
+      
+      {% endif %}
+      
+      
+      
+
+    
+{% endblock %}

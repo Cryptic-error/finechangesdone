@@ -1,0 +1,225 @@
+{% extends "shop/basic.html" %}
+
+{% block BREADCRUMB %}
+    {% include './product_carousel.html' %}
+{% endblock %}
+
+{% block body %}
+    <body>
+        <div class="container my-4">
+            <div class="row">
+                <!-- Left: YouTube Player -->
+                <div class="col-md-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="YouTube video" allowfullscreen></iframe>
+                    </div>
+                </div>
+                
+                <!-- Right: Heading and Text -->
+                <div class="col-md-6 d-flex align-items-center">
+                    <div>
+                        <h2>Hear from our managing director</h2>
+                        <p>
+                            Fine Surgicals Nepal Private Limited, is a dynamic and a leading
+                            medical equipment and surgical item supplier company based in
+                            Kathmandu, Nepal.
+                            The company was established in 2017 and has its registered address
+                            at Chabahil, Ganesthan, Kathmandu,
+                            The company deals with supply of medical equipments, medical
+                            machineries, surgical items and medical devices.
+                            The company has a wide range of satisfied client portfolio including
+                            but not limited to Hospitals, Government Authorities, Local Bodies,
+                            Private Organizations, Non-Profit Organization (NPO), International
+                            Non-Governmental Organizations (INGO's) besides individual
+                            customer.
+                            The company is managed by strong and experienced team of
+                            professionals including Doctors, Bio-Medical Engineers, Chartered
+                            Accountants and industry experts having experience of more than
+                            20 years of experience in medical items and equipment
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <!-- Our Vision Section -->
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <img src="/static/img/company/ourvision.jpg" class="img-fluid" alt="Our Vision">
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <div>
+                        <h2>Our Vision</h2>
+                        <p>Our vision is to create a future where our products are essential in every aspect of life, driving progress and innovation for a sustainable tomorrow.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Our Mission Section (Image on the right) -->
+            <div class="row mb-5">
+                <div class="col-md-6 d-flex align-items-center order-md-2">
+                    <div>
+                        <h2>Our Mission</h2>
+                        <p>Our mission is to continuously innovate and provide high-quality products that exceed customer expectations, while making a positive impact on the community and environment.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <img src="/static/img/company/ourmission.jpg" class="img-fluid" alt="Our Mission">
+                </div>
+            </div>
+        
+            <!-- Core Values Section (Image on the left) -->
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <img src="/static/img/company/ourgoal.jpg" class="img-fluid" alt="Core Values">
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <div>
+                        <h2>Core Values</h2>
+                        <p>Our core values are integrity, innovation, and customer-centricity. We believe in doing the right thing, pushing boundaries, and always putting our customers first.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Button to Download PDF -->
+            <div class="text-center">
+                <button class="btn btn-primary" onclick="downloadPDF()">Download company profile</button>
+            </div>
+        </div>
+        <div class="ltn__team-area pt-115 pb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title-area ltn__section-title-2--- text-center">
+                            <h1 class="section-title">Our Expert Team</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="ltn__team-item ltn__team-item-3---">
+                            <div class="team-img">
+                                <img src="/static/img/testimonial/palpasaimg/bishal.jpg" alt="Image" width="600" height="360">
+                            </div>
+                            <div class="team-info">
+                                <h4><a>Bishal Bhandari</a></h4>
+                                <h6 class="ltn__secondary-color">Managing director/Founder/Logistic expert</h6>
+                                <div class="ltn__social-media">
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/bishal.bhandari.102"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a><i class="fab fa-twitter"></i></a></li>
+                                        <li><a><i class="fab fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="ltn__team-item ltn__team-item-3---">
+                            <div class="team-img">
+                                <img src="/static/img/testimonial/palpasaimg/rajesh sir.jpg" alt="Image"width="600" height="360">
+                            </div>
+                            <div class="team-info">
+                                <h4><a>Rajesh Acharya</a></h4>
+                                <h6 class="ltn__secondary-color">Biomedical Engineer</h6>
+                                <div class="ltn__social-media">
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/rajesh.acharya.315865"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a><i class="fab fa-twitter"></i></a></li>
+                                        <li><a><i class="fab fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="ltn__team-item ltn__team-item-3---" width="600" height="360">
+                            <div class="team-img">
+                                <img src="/static/img/testimonial/palpasaimg/tirthasir.jpg" alt="Image"width="600" height="360">
+                            </div>
+                            <div class="team-info">
+                                <h4><a>DR.Tirthaman shrestha</a></h4>
+                                <h6 class="ltn__secondary-color">Doctor</h6>
+                                <div class="ltn__social-media">
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/tirtha.shrestha.102"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a><i class="fab fa-twitter"></i></a></li>
+                                        <li><a><i class="fab fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="ltn__team-item ltn__team-item-3---" width="600" height="360">
+                            <div class="team-img">
+                                <img src="/static/img/testimonial/palpasaimg/ravisir2.jpeg" alt="Image"width="600" height="360">
+                            </div>
+                            <div class="team-info">
+                                <h4><a>Ravi Chapagain</a></h4>
+                                <h6 class="ltn__secondary-color">Project Co-ordinator</h6>
+                                <div class="ltn__social-media">
+                                    <ul>
+                                        <li><a><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a><i class="fab fa-twitter"></i></a></li>
+                                        <li><a><i class="fab fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="ltn__team-item ltn__team-item-3---">
+                            <div class="team-img">
+                                <img src="/static/img/testimonial/palpasaimg/twinklemadam.jpg" alt="Image"width="600" height="360">
+                            </div>
+                            <div class="team-info">
+                                <h4><a >Twinkle Yadav</a></h4>
+                                <h6 class="ltn__secondary-color">Biomedical Engineer</h6>
+                                <div class="ltn__social-media">
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/rajesh.acharya.315865"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a><i class="fab fa-twitter"></i></a></li>
+                                        <li><a><i class="fab fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="ltn__team-item ltn__team-item-3---" width="600" height="360">
+                            <div class="team-img">
+                                <img src="/static/img/testimonial/palpasaimg/rabin.jpg" alt="Image"width="600" height="360">
+                            </div>
+                            <div class="team-info">
+                                <h4><a >Rabin sapkota</a></h4>
+                                <h6 class="ltn__secondary-color">Sales Analyst</h6>
+                                <div class="ltn__social-media">
+                                    <ul>
+                                        <li><a ><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a ><i class="fab fa-twitter"></i></a></li>
+                                        <li><a ><i class="fab fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    <script>
+        function downloadPDF() {
+            // Logic to download a PDF
+            const link = document.createElement('a');
+            link.href = '/static/pdf/Finemerged.pdf';  // Path to your PDF file
+            link.download = 'fine_company_profile.pdf';  // Name of the file to be downloaded
+            link.click();
+        }
+    </script>
+{% endblock %}

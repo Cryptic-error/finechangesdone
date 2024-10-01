@@ -1,0 +1,563 @@
+{% extends "shop/basic.html" %}
+{% load product_filters %}
+
+
+<div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="checkoutModalLabel">Checkout Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone number</label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Delivery address</label>
+                        <input type="text" class="form-control" id="address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="deliveryTime">Expected delivery time</label>
+                        <input type="text" class="form-control" id="deliveryTime" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="submitCheckout">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% block cartbg-image %}
+
+<li>
+    <!-- mini-cart 2 -->
+    <div class="mini-cart-icon mini-cart-icon-2">
+        <a href="#ltn__utilize-cart-menu" class="ltn__utilize-toggle">
+            <span class="mini-cart-icon">
+                <i class="cart"></i>
+                <sup><span id="cart">{{ cart_total }}</span></sup>
+            </span>
+            <h6><span>Your Cart</span> <span class="ltn__secondary-color">$89.25</span></h6>
+        </a>
+    </div>
+</li>
+
+{% endblock %}
+
+{% block BREADCRUMB %}
+<div class="ltn__utilize-overlay"></div>
+
+<!-- BREADCRUMB AREA START -->
+<div class="ltn__breadcrumb-area text-left bg-overlay-white-10 bg-image "  data-bs-bg="/static/img/bg/Finebread.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ltn__breadcrumb-inner">
+                    <h1 class="page-title">Product</h1>
+                    <div class="ltn__breadcrumb-list">
+                        <ul>
+                            <li><a href="index.html"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span> Home</a></li>
+                            <li>Product</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block body %}
+{% for product, range, nslides in allprods %}
+<div class="ltn__product-area ltn__product-gutter pt-115 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title-area ltn__section-title-2 text-center">
+                    <h1 class="section-title">{{ product.0.category }}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row ltn__tab-product-slider-one-active--- slick-arrow-1">
+            <!-- ltn__product-item -->
+            {% for item in product %}
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="ltn__product-item ltn__product-item-3 text-left">
+                    <div class="product-img">
+                        <a href="product-details.html"><img src="{{ item.image.url }}" alt="{{ item.alt }}" height="200"></a>
+                        <div class="product-badge">
+                            <ul>
+                                <li class="sale-badge">New</li>
+                            </ul>
+                        </div>
+                        <div class="product-hover-action">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal{{ item.product_id }}">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <span id="divpr{{ item.product_id }}"></span>
+                                    <a title="Add to Cart" class="add-to-cart" 
+                                       data-product="{{ item.product_id }}" 
+                                       data-name="{{ item.product_name }}" 
+                                       data-price="{{ item.price }}"
+                                       data-image-url="{{ item.image.url }}"
+                                       data-desc="{{ item.desc }}"> <!-- Add data-image-url attribute if necessary -->
+                                        <i id="pr{{ item.product_id }}" class="fas fa-shopping-cart cart"></i>
+                                    </a>
+                                </li>
+                                <!-- Add other actions like add to cart, wishlist, etc. -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-ratting">
+                            <ul>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                <!-- Add product ratings -->
+                            </ul>
+                        </div>
+                        <h2 class="product-title"><a href="product-details.html" id="namepr{{ item.product_id }}">{{ item.product_name }}</a></h2>
+                        <div class="product-price">
+                            <span>{{ item.price }}</span>
+                            <!-- Add product price -->
+                            <del>{{ item.prev_price }}</del><br>
+                            <!-- Add product description -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+
+
+
+<!-- Modals -->
+{% for product, range, nslides in allprods %}
+    {% for item in product %}
+        <div class="ltn__modal-area ltn__quick-view-modal-area">
+            <div class="modal fade" id="quick_view_modal{{ item.product_id }}" tabindex="-1">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="ltn__quick-view-modal-inner">
+                                <div class="modal-product-item">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-12">
+                                            <div class="modal-product-img" id="modal_product_img">
+                                                <img src="{{ item.image.url }}" alt="{{ item.product_name }}">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="modal-product-info">
+                                                <div class="product-ratting">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <!-- Add product ratings -->
+                                                    </ul>
+                                                </div>
+                                                <h3 id="namepr{{item.id}}"><a href="product-details.html">{{ item.product_name }}</a></h3>
+                                                <div class="product-price" id="modal_product_price">
+                                                    <span>{{ item.price }}</span>
+                                                    <del>{{ item.prev_price }}</del>
+                                                </div>
+                                                <hr>
+                                                <div class="modal-product-brief" id="modal_product_desc">
+                                                    <p>{{ item.desc }}</p>
+                                                </div>
+                                                <!-- other modal elements can be updated similarly if needed -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endfor %}
+{%endblock%}
+
+
+{% block cartmenu %}
+<div id="ltn__utilize-cart-menu" class="ltn__utilize ltn__utilize-cart-menu">
+    <div class="ltn__utilize-menu-inner ltn__scrollbar">
+        <div class="ltn__utilize-menu-head">
+            <span class="ltn__utilize-menu-title">Cart</span>
+            <button class="ltn__utilize-close">×</button>
+        </div>
+        
+        <div id="cartsubmenu" class="mini-cart-product-area ltn__scrollbar">
+            <!-- Cart items dynamically generated by JavaScript -->
+        </div>
+
+        <div class="mini-cart-footer">
+            <div class="mini-cart-sub-total">
+                <h5>Subtotal: <span id="subtotal">${{ total_price }}</span></h5>
+            </div>
+            <div class="btn-wrapper">
+                <a href="cart.html" class="theme-btn-1 btn btn-effect-1">View Cart</a>
+                <a id="checkoutButton" href="#" class="theme-btn-2 btn btn-effect-2">Checkout</a>
+                <button id="generate-pdf" class="theme-btn-2 btn btn-effect-2">Generate PDF</button>
+            </div>
+            <p>Faster delivery all over the Nepal</p>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
+   
+
+{% block js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader area end -->
+
+    <!-- All JS Plugins -->
+    <script src="/static/js/plugins.js"></script>
+    <!-- Main JS -->
+    <script src="/static/js/main.js"></script>
+    <script>
+        // Initialize cart from localStorage or create new if empty
+        var cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : {};
+      
+        $(document).ready(function() {
+            $('.add-to-cart').click(function () {
+                var idstr = $(this).data('product');  // Product ID
+                var name = $(this).data('name');      // Product Name
+                var price = parseFloat($(this).data('price'));  // Product Price
+                var imageUrl = $(this).data('image-url');
+                var description = $(this).data('desc'); // Assuming description is available as a data attribute
+      
+                // Update cart with product details
+                if (cart[idstr] !== undefined) {
+                    // Product already exists in cart, increment quantity
+                    cart[idstr].quantity += 1;
+                } else {
+                    // Add new product to cart
+                    cart[idstr] = {
+                        name: name,
+                        price: price,
+                        quantity: 1,
+                        image_url: imageUrl,
+                        desc: description
+                    };
+                }
+      
+                // Update localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+      
+                // Update UI
+                updateCartTotal();
+            });
+      
+            // Function to update cart total and display
+            function updateCartTotal() {
+                var totalItems = 0;
+                var totalAmount = 0; // Variable to store total amount in cart
+                var cartContent = '';
+      
+                // Calculate total items and generate cart content HTML
+                for (var key in cart) {
+                    if (cart.hasOwnProperty(key)) {
+                        totalItems += cart[key].quantity;
+            
+                        // Calculate total amount for this product
+                        var subtotal = cart[key].quantity * cart[key].price;
+                        totalAmount += subtotal;
+            
+                        cartContent += `
+                            <div class="mini-cart-item clearfix">
+                                <div class="mini-cart-img">
+                                    <a href="#"><img src="${cart[key].image_url}" alt="Image"></a>
+                                    <span class="mini-cart-item-delete" data-product="${key}"><i class="icon-cancel"></i></span>
+                                </div>
+                                <div class="mini-cart-info">
+                                    <h6><a href="#">${cart[key].name}</a></h6>
+                                    <span class="mini-cart-quantity">${cart[key].quantity} x ${cart[key].price} = ${subtotal.toFixed(2)}</span>
+                                </div>
+                            </div>
+                        `;
+                    }
+                }
+      
+                // Display total items in cart
+                document.getElementById('cart').innerHTML = totalItems;
+      
+                // Display cart items in the cart submenu container
+                var cartsubmenu = document.getElementById('cartsubmenu');
+                cartsubmenu.innerHTML = cartContent;
+      
+                var subtotalElement = document.getElementById('subtotal');
+                subtotalElement.textContent = totalAmount.toFixed(2);
+      
+                // Attach event listener to delete items from cart
+                $('.mini-cart-item-delete').click(function() {
+                    var productId = $(this).data('product');
+                    // Remove the item from cart
+                    delete cart[productId];
+                    // Update localStorage
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    // Update UI
+                    updateCartTotal();
+                });
+            }
+
+            function generateEmailContent(cart, userDetails) {
+                let subject = `Order Confirmation - Email: ${userDetails.email}, Phone: ${userDetails.phone}, Address: ${userDetails.address}, Delivery Time: ${userDetails.deliveryTime}`;
+                let body = `Hello,\n\nYour cart contains the following items:\n\n`;
+                for (let key in cart) {
+                    if (cart.hasOwnProperty(key)) {
+                        body += `${cart[key].quantity} x ${cart[key].name} at $${cart[key].price} each\n`;
+                    }
+                }
+                body += `\nTotal: $${Object.values(cart).reduce((sum, item) => sum + item.quantity * item.price, 0).toFixed(2)}\n\n`;
+                body += `Thank you for your purchase!\n\nBest regards,\nYour Company`;
+        
+                // Encode subject and body
+                subject = encodeURIComponent(subject);
+                body = encodeURIComponent(body);
+        
+                return `mailto:"Abhayadhakal456@gmail.com"?subject=${subject}&body=${body}`;
+            }
+        
+            // Event listener for checkout button
+            $('#checkoutButton').click(function (e) {
+                e.preventDefault();
+                $('#checkoutModal').modal('show');
+            });
+        
+            // Event listener for submit button in the modal
+            $('#submitCheckout').click(function (e) {
+                e.preventDefault();
+                let userEmail = $('#email').val();
+                let userPhone = $('#phone').val();
+                let userAddress = $('#address').val();
+                let userDeliveryTime = $('#deliveryTime').val();
+        
+                if (userEmail && userPhone && userAddress && userDeliveryTime) {
+                    let userDetails = {
+                        email: userEmail,
+                        phone: userPhone,
+                        address: userAddress,
+                        deliveryTime: userDeliveryTime
+                    };
+                    let mailtoLink = generateEmailContent(cart, userDetails);
+                    window.location.href = mailtoLink;
+                }
+            });
+      
+            // Function to generate PD
+            
+            
+
+        
+        
+            // Initial call to updateCartTotal to populate cart on page load
+            updateCartTotal();
+        });
+            
+      </script>
+      {% if user.is_superuser %}
+      <script>
+
+        function generatePDF() {
+            var { jsPDF } = window.jspdf;
+            var doc = new jsPDF();
+            var serialNumber = 1;
+        
+            var tableBody = [];
+            var promises = [];
+            var headerImage = '/static/img/header/fine_surgical.png'; // Replace with your header image path
+            var footerImage = '/static/img/header/footer.jpg'; // Replace with your footer image path
+        
+            for (var key in cart) {
+                if (cart.hasOwnProperty(key)) {
+                    (function (key, serialNumber) {
+                        var item = cart[key];
+                        var row = [];
+        
+                        // Serial Number
+                        row.push(serialNumber);
+        
+                        // Create a promise to load the image
+                        var promise = new Promise(function (resolve, reject) {
+                            var img = new Image();
+                            img.src = item.image_url;
+                            img.crossOrigin = 'Anonymous'; // Handle CORS issues if the images are hosted on another domain
+        
+                            img.onload = function () {
+                                var canvas = document.createElement('canvas');
+                                canvas.width = img.width;
+                                canvas.height = img.height;
+                                var ctx = canvas.getContext('2d');
+                                ctx.drawImage(img, 0, 0);
+                                var imgData = canvas.toDataURL('image/PNG');
+                                resolve(imgData);
+                            };
+        
+                            img.onerror = function () {
+                                console.error("Error loading image for product ID " + key);
+                                resolve(null); // Resolve with null if there's an error
+                            };
+                        });
+        
+                        promises.push(promise);
+        
+                        // Add product details (without image)
+                        row.push(''); // Placeholder for image
+                        row.push(item.name);
+                        row.push(item.desc);
+                        row.push(item.price.toFixed(2));
+                        row.push(item.quantity);
+        
+                        // Add amount (quantity * price)
+                        var amount = (item.price * item.quantity).toFixed(2);
+                        row.push(amount);
+        
+                        tableBody.push(row);
+                    })(key, serialNumber);
+        
+                    serialNumber++;
+                }
+            }
+        
+            // Wait for all image promises to be resolved
+            Promise.all(promises).then(function (imageDataArray) {
+                // Rebuild the tableBody with resolved image data
+                for (var i = 0; i < tableBody.length; i++) {
+                    if (imageDataArray[i]) {
+                        tableBody[i][1] = { content: '', image: imageDataArray[i], width: 20, height: 20 };
+                    } else {
+                        tableBody[i][1] = 'Image not available';
+                    }
+                }
+        
+                var pageWidth = doc.internal.pageSize.width || doc.internal.pageSize.getWidth();
+                var headerImageWidth = pageWidth * 0.9;
+                var headerImageHeight = 20; // Define header image height
+                var startY = headerImageHeight + 15; // Define starting Y position for the table to avoid overlapping
+        
+                doc.autoTable({
+                    head: [['S.No', 'Image', 'Product Name', 'Description', 'Price', 'Quantity', 'Amount']],
+                    body: tableBody,
+                    didDrawCell: function (data) {
+                        if (data.column && data.column.index === 1 && data.cell.section === 'body' && data.cell.raw && data.cell.raw.image) {
+                            console.log("Adding image to PDF at cell:", data.row.index + 1);
+                            try {
+                                // Calculate image height while maintaining aspect ratio
+                                var imgHeight = (data.cell.raw.height / data.cell.raw.width) * 28;
+                                doc.addImage(data.cell.raw.image, 'PNG', data.cell.x + 2, data.cell.y + 2, 26, imgHeight);
+                            } catch (error) {
+                                console.error("Error adding image to PDF for cell:", data.row.index + 1, error);
+                            }
+                        }
+                    },
+                    styles: {
+                        cellPadding: 2, // Adjust the padding inside each cell
+                        minCellHeight: 25, // Set minimum cell height for all cells
+                        head: {
+                            fontSize: 18, // Adjust the font size of the header cells
+                            fillColor: [0, 0, 255], // Set the background color of header cells to RGB(0, 0, 255)
+                        }
+                    },
+                    didParseCell: function (data) {
+                        if (data.column.index === 3) { // Check if the column is "Description"
+                            var textHeight = doc.getTextDimensions(data.cell.raw).h;
+                            data.cell.styles.minCellHeight = Math.max(data.cell.styles.minCellHeight, textHeight + 5); // Adjust row height based on text height
+                        }
+                    },
+                    columnStyles: {
+                        1: { cellWidth: 30 } // Set the width of the image column
+                    },
+                    rowPageBreak: 'auto',
+                    bodyStyles: { valign: 'top' },
+                    startY: startY, // Start the table after the header image
+                    headStyles: {
+                        fontSize: 12, // Adjust the font size for the table header
+                        cellPadding: 2,
+                        fillColor: [0, 123, 255],
+                        minCellHeight: 15,
+                    },
+                    didDrawPage: function (data) {
+                        // Header
+                        doc.addImage(headerImage, 'PNG', (pageWidth - headerImageWidth) / 2, 10, headerImageWidth, headerImageHeight);
+                        
+                        // Footer
+                        var footerImageHeight = 50; // Fixed height for the footer image
+                        var footerImageWidth = 55; // Fixed width for the footer image
+                        var marginRight = 10; // Margin from the right side of the page
+                        var xPosition = marginRight;
+                        var yPosition = doc.internal.pageSize.height - footerImageHeight - 10;
+                        doc.addImage(footerImage, 'PNG', xPosition, yPosition, footerImageWidth, footerImageHeight);
+                    }
+                    
+                });
+        
+                doc.save('cart.pdf');
+            }).catch(function (error) {
+                console.error("Error generating PDF:", error);
+            });
+        }
+        
+        // Attach event listener to generate PDF button
+        $('#generate-pdf').click(function () {
+            generatePDF();
+        });
+
+
+
+      </script>
+
+      {% else %}
+      <script>console.log("you aint admin bro")</script>
+      
+      {% endif %}
+      
+      
+      
+
+    
+{% endblock %}
