@@ -32,7 +32,8 @@ jobs:
 
       run: |
         # Transfer code to the server, exclude the media directory to preserve existing files
-        rsync -avz --exclude 'media/' --exclude 'venv/' . $USER@$HOST:/var/www/finesurgicalsnepal/finechangesdone/
+        rsync -avz -e "ssh -o StrictHostKeyChecking=no" --exclude 'media/' --exclude 'venv/' . $root@$82.180.147.100:/var/www/finesurgicalsnepal/finechangesdone/
+
 
         # SSH into the server for deployment steps
         ssh -i $SSH_KEY $USER@$HOST << 'EOF'
