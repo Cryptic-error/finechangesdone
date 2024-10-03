@@ -3,7 +3,7 @@ name: Django CI/CD Pipeline
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -31,18 +31,23 @@ jobs:
         SSH_KEY: ${{ secrets.SSH_KEY }}
 
       run: |
-        # Transfer code to the server, exclude the media directory
+        # Transfer code to the server, exclude the media directory to preserve existing files
         rsync -avz --exclude 'media/' --exclude 'venv/' . $USER@$HOST:/var/www/finesurgicalsnepal/finechangesdone/
 
-        # SSH into the server to restart the app
-        ssh -i $SSH_KEY $USER@$HOST << EOF
-        source /var/www/finesurgicalsnepal/finechangesdone/venv/bin/activate
+        # SSH into the server for deployment steps
+        ssh -i $SSH_KEY $USER@$HOST << 'EOF'
         cd /var/www/finesurgicalsnepal/finechangesdone
+
+        # Activate virtual environment
+        source /var/www/finesurgicalsnepal/finechangesdone/venv/bin/activate
+
         # Apply database migrations
         python manage.py migrate
+
         # Collect static files
         python manage.py collectstatic --noinput
-        # Restart Gunicorn
-        pkill gunicorn || true
-        gunicorn --workers 3 --bind 127.0.0.1:8000 Palpasa.wsgi:application &
+
+        # Restart Gunicorn service using systemd
+        sudo systemctl restart gunicorn
         EOF
+
