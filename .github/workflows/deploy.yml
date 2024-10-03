@@ -1,0 +1,48 @@
+name: Django CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+
+    - name: Install dependencies
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install -r requirements.txt
+
+    - name: Deploy code to server
+      env:
+        HOST: ${{ secrets.SERVER_HOST }}
+        USER: ${{ secrets.SERVER_USER }}
+        SSH_KEY: ${{ secrets.SSH_KEY }}
+
+      run: |
+        # Transfer code to the server, exclude the media directory
+        rsync -avz --exclude 'media/' --exclude 'venv/' . $USER@$HOST:/var/www/finesurgicalsnepal/finechangesdone/
+
+        # SSH into the server to restart the app
+        ssh -i $SSH_KEY $USER@$HOST << EOF
+        source /var/www/finesurgicalsnepal/finechangesdone/venv/bin/activate
+        cd /var/www/finesurgicalsnepal/finechangesdone
+        # Apply database migrations
+        python manage.py migrate
+        # Collect static files
+        python manage.py collectstatic --noinput
+        # Restart Gunicorn
+        pkill gunicorn || true
+        gunicorn --workers 3 --bind 127.0.0.1:8000 Palpasa.wsgi:application &
+        EOF
