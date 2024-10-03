@@ -1,0 +1,53 @@
+name: Django CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+
+    - name: Install dependencies
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install -r requirements.txt
+
+    - name: Deploy code to server
+      env:
+        HOST: ${{ secrets.SERVER_HOST }}
+        USER: ${{ secrets.SERVER_USER }}
+        SSH_KEY: ${{ secrets.SSH_KEY }}
+
+      run: |
+        # Transfer code to the server, exclude the media directory to preserve existing files
+        rsync -avz --exclude 'media/' --exclude 'venv/' . $USER@$HOST:/var/www/finesurgicalsnepal/finechangesdone/
+
+        # SSH into the server for deployment steps
+        ssh -i $SSH_KEY $USER@$HOST << 'EOF'
+        cd /var/www/finesurgicalsnepal/finechangesdone
+
+        # Activate virtual environment
+        source /var/www/finesurgicalsnepal/finechangesdone/venv/bin/activate
+
+        # Apply database migrations
+        python manage.py migrate
+
+        # Collect static files
+        python manage.py collectstatic --noinput
+
+        # Restart Gunicorn service using systemd
+        sudo systemctl restart gunicorn
+        EOF
+
