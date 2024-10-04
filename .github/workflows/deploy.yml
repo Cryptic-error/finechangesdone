@@ -26,17 +26,16 @@ jobs:
 
     - name: Deploy code to server
       env:
-        HOST: 82.180.147.100
+        HOST: ${{ secrets.SERVER_HOST }}  # Update SERVER_HOST with your IP
         USER: ${{ secrets.SERVER_USER }}
         SSH_KEY: ${{ secrets.SSH_KEY }}
 
       run: |
         # Transfer code to the server, exclude the media directory to preserve existing files
-        rsync -avz -e "ssh -o StrictHostKeyChecking=no" --exclude 'media/' --exclude 'venv/' . $root@$82.180.147.100:/var/www/finesurgicalsnepal/finechangesdone/
-
+        rsync -avz -e "ssh -i $SSH_KEY -o StrictHostKeyChecking=no" --exclude 'media/' --exclude 'venv/' . $USER@$HOST:/var/www/finesurgicalsnepal/finechangesdone/
 
         # SSH into the server for deployment steps
-        ssh -i $SSH_KEY $root@$82.180.147.100 << 'EOF'
+        ssh -i $SSH_KEY -o StrictHostKeyChecking=no $USER@$HOST << 'EOF'
         cd /var/www/finesurgicalsnepal/finechangesdone
 
         # Activate virtual environment
@@ -51,4 +50,3 @@ jobs:
         # Restart Gunicorn service using systemd
         sudo systemctl restart gunicorn
         EOF
-
