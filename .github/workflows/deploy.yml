@@ -24,19 +24,23 @@ jobs:
         source venv/bin/activate
         pip install -r requirement.txt
 
-    - name: Deploy code to server
+    - name: Setup SSH
+      run: |
+        mkdir -p ~/.ssh
+        echo "$SSH_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
       env:
-        HOST: ${{ secrets.SERVER_HOST }}  # Update SERVER_HOST with your IP
-        USER: ${{ secrets.SERVER_USER }}
         SSH_KEY: ${{ secrets.SSH_KEY }}
 
-      run: |
-        mkdir -p ~/.ssh  # Create .ssh directory if it doesn't exist
-        echo "$SSH_KEY" > ~/.ssh/id_rsa  # Save SSH key to a file
-        chmod 600 ~/.ssh/id_rsa  # Set correct permissions
+    - name: Deploy code to server
+      env:
+        HOST: ${{ secrets.SERVER_HOST }}
+        USER: ${{ secrets.SERVER_USER }}
 
+      run: |
         # Transfer code to the server, exclude the media directory to preserve existing files
-        rsync -avz -e "ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa" --exclude 'media/' --exclude 'venv/' . $USER@$HOST:/var/www/finesurgicalsnepal/finechangesdone/
+        rsync -avz -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" --exclude 'media/' --exclude 'venv/' . $USER@$HOST:/var/www/finesurgicalsnepal/finechangesdone/
 
         # SSH into the server for deployment steps
         ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no $USER@$HOST << 'EOF'
