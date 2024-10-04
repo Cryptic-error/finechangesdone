@@ -36,7 +36,7 @@ jobs:
 
 
         # SSH into the server for deployment steps
-        ssh -i $SSH_KEY $USER@$HOST << 'EOF'
+        ssh -i $SSH_KEY $root@$82.180.147.100 << 'EOF'
         cd /var/www/finesurgicalsnepal/finechangesdone
 
         # Activate virtual environment
