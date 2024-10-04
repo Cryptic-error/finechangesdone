@@ -31,11 +31,14 @@ jobs:
         SSH_KEY: ${{ secrets.SSH_KEY }}
 
       run: |
+        echo "$SSH_KEY" > ~/.ssh/id_rsa  # Save SSH key to a file
+        chmod 600 ~/.ssh/id_rsa  # Set correct permissions
+
         # Transfer code to the server, exclude the media directory to preserve existing files
-        rsync -avz -e "ssh -i $SSH_KEY -o StrictHostKeyChecking=no" --exclude 'media/' --exclude 'venv/' . $USER@$HOST:/var/www/finesurgicalsnepal/finechangesdone/
+        rsync -avz -e "ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa" --exclude 'media/' --exclude 'venv/' . $USER@$HOST:/var/www/finesurgicalsnepal/finechangesdone/
 
         # SSH into the server for deployment steps
-        ssh -i $SSH_KEY -o StrictHostKeyChecking=no $USER@$HOST << 'EOF'
+        ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no $USER@$HOST << 'EOF'
         cd /var/www/finesurgicalsnepal/finechangesdone
 
         # Activate virtual environment
