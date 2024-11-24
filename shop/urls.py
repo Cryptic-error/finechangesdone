@@ -37,6 +37,7 @@ urlpatterns = [
     path('product', views.product,name="product"),
    path('servicedetl', views.servicedetl,name="servicedetail"),
    path('search/', views.search, name='search'),
+   path("robots.txt", views.robots_txt, name="robots_txt"),
     
     ]
 

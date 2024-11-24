@@ -207,4 +207,9 @@ def admin_only_view(request):
             return render(request, 'error.html', {'message': 'You are not authorized to access this page.'})
     
 
-
+def robots_txt(request):
+    content = """User-agent: *
+Disallow: /admin/
+Allow: /
+"""
+    return HttpResponse(content, content_type="text/plain")
