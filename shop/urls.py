@@ -32,7 +32,6 @@ urlpatterns = [
     path('register', views.register, name='register'),
     path('login', views.login_view, name='login'),
     path('accounts/logout', views.logout_view, name='logout'),
-    path('home', views.home, name='home'),
     path('admin/', admin.site.urls),
     path('product', views.product,name="product"),
    path('servicedetl', views.servicedetl,name="servicedetail"),
