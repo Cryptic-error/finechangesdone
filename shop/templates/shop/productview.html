@@ -1,0 +1,120 @@
+{% extends "shop/basic.html" %}
+
+{%block body%}
+
+
+<style>
+    .product-title {
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    .price {
+        color: #28a745;
+        font-weight: bold;
+    }
+
+    .prev-price {
+        text-decoration: line-through;
+        color: #dc3545;
+        margin-left: 10px;
+    }
+
+    .bullet-points ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+
+    .product-image img {
+        max-width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+    }
+</style>
+</head>
+<body>
+<div class="container mt-5">
+    <div class="card">
+        <div class="row no-gutters">
+            <!-- Product Image Section -->
+            <div class="col-md-6">
+                <div class="product-image text-center p-3">
+                    <img src="{{ product.image.url }}" alt="{{ product.alt }}">
+                </div>
+            </div>
+            <!-- Product Details Section -->
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h1 class="product-title">{{ product.product_name }}</h1>
+                    <h5 class="brand text-muted">Brand: {{ product.brand }}</h5>
+                    <p class="category"><strong>Category:</strong> {{ product.category }}</p>
+                    
+                    <!-- Price Section -->
+                    <h4 class="price">
+                        ₹{{ product.price }}
+                        {% if product.prev_price %}
+                            <span class="prev-price">₹{{ product.prev_price }}</span>
+                        {% endif %}
+                    </h4>
+                    
+                    <!-- Description -->
+                    <p class="product-description">{{ product.desc }}</p>
+                    
+                    <!-- Bullet Points -->
+                    <div class="bullet-points">
+                        <h5>Features:</h5>
+                        <ul>
+                            {% if product.bullet_point_1 %}
+                                <li>{{ product.bullet_point_1 }}</li>
+                            {% endif %}
+                            {% if product.bullet_point_2 %}
+                                <li>{{ product.bullet_point_2 }}</li>
+                            {% endif %}
+                            {% if product.bullet_point_3 %}
+                                <li>{{ product.bullet_point_3 }}</li>
+                            {% endif %}
+                            {% if product.bullet_point_4 %}
+                                <li>{{ product.bullet_point_4 }}</li>
+                            {% endif %}
+                            {% if product.bullet_point_5 %}
+                                <li>{{ product.bullet_point_5 }}</li>
+                            {% endif %}
+                            {% if product.bullet_point_6 %}
+                                <li>{{ product.bullet_point_6 }}</li>
+                            {% endif %}
+                            {% if product.bullet_point_7 %}
+                                <li>{{ product.bullet_point_7 }}</li>
+                            {% endif %}
+                            {% if product.bullet_point_8 %}
+                                <li>{{ product.bullet_point_8 }}</li>
+                            {% endif %}
+                            {% if product.bullet_point_9 %}
+                                <li>{{ product.bullet_point_9 }}</li>
+                            {% endif %}
+                            {% if product.bullet_point_10 %}
+                                <li>{{ product.bullet_point_10 }}</li>
+                            {% endif %}
+                        </ul>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action mt-3">
+                        <button class="btn btn-success" type="button">Add to Cart</button>
+                        <button class="btn btn-danger" type="button"><i class="fa fa-heart"></i> Like</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+{% comment %} <h1>my name is abhay</h1> {% endcomment %}
+
+{%endblock%}
+

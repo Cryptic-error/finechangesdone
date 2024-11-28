@@ -179,6 +179,12 @@ def home(request):
     print(params)
     return render(request, "shop/home.html", params)
 
+def productview(request,prodname):
+    product = Product.objects.filter(product_name=prodname)
+    for products in product:
+        print(products)
+        print(products.product_id)
+    return render(request,"shop/productview.html",{"product":product[0]})
 
 def basic(request):
     # Get all products across categories

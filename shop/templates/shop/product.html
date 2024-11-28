@@ -116,7 +116,7 @@
                             <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                                 <div class="ltn__product-item ltn__product-item-3 text-left">
                                     <div class="product-img">
-                                        <a href="product-details.html"><img src="{{ item.image.url }}" alt="{{ item.alt }}" height="200"></a>
+                                        <a href="products/{{item.product_name}}"><img src="{{ item.image.url }}" alt="{{ item.alt }}" height="200"></a>
                                         <div class="product-badge">
                                             <ul>
                                                 <li class="sale-badge">New</li>
@@ -163,7 +163,7 @@
                                                 <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
                                             </ul>
                                         </div>
-                                        <h2 class="product-title"><a href="product-details.html" id="namepr{{ item.product_id }}">{{ item.product_name }}</a></h2>
+                                        <h2 class="product-title"><a href="products/{{item.product_name}}" id="namepr{{ item.product_id }}">{{ item.product_name }}</a></h2>
                                         <div class="product-price">
                                             <span>{{ item.price }}</span>
                                             <del>{{ item.prev_price }}</del><br>
@@ -214,7 +214,7 @@
                                                     </ul>
                                                 </div>
                                                 <h3 id="namepr{{item.id}}" style="font-size: 36px;color:blue;">
-                                                    <a href="product-details.html">{{ item.product_name }}<br>
+                                                    <a href="products/{{item.product_name}}">{{ item.product_name }}<br>
                                                         <span>Brand: {{ item.brand }}</span><br>
                                                     </a>
                                                 </h3>

@@ -37,7 +37,7 @@ urlpatterns = [
    path('servicedetl', views.servicedetl,name="servicedetail"),
    path('search/', views.search, name='search'),
    path("robots.txt", views.robots_txt, name="robots_txt"),
-    
+    path('products/<str:prodname>', views.productview,name="products"),
     ]
 
 
