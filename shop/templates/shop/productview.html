@@ -1,5 +1,12 @@
 {% extends "shop/basic.html" %}
 
+
+{% block meta %}
+<meta name="description" content="{{ product.desc }}">
+<meta name="keywords" content="{{ product.meta }}">
+{% endblock %}
+
+
 {%block body%}
 
 
@@ -114,7 +121,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
-{% comment %} <h1>my name is abhay</h1> {% endcomment %}
 
 {%endblock%}
 

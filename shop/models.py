@@ -8,6 +8,7 @@ from django.core.validators import MinLengthValidator
 class Product(models.Model):
     product_id = models.AutoField(primary_key=True)
     product_name = models.CharField(_("Product Name"), max_length=50)
+    meta = models.CharField(_("Meta keywords"), max_length=300)
     brand =models.CharField(_("Brand"), max_length=50,blank=True, null=True)
     alt = models.CharField(_("alt"), max_length=50, blank=True, null=True)
     desc = models.TextField(validators=[MinLengthValidator(50)])

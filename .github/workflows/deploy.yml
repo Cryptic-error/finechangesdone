@@ -50,6 +50,7 @@ jobs:
         source /var/www/finesurgicalsnepal/finechangesdone/venv/bin/activate
 
         # Apply database migrations
+        python manage.py makemigrations || true
         python manage.py migrate
 
         # Collect static files
