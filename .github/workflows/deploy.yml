@@ -24,26 +24,20 @@ jobs:
         source venv/bin/activate
         pip install -r requirement.txt
 
-    - name: Setup SSH
-      run: |
-        mkdir -p ~/.ssh
-        echo "$SSH_KEY" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
-      env:
-        SSH_KEY: ${{ secrets.SSH_KEY }}
+    - name: Install sshpass
+      run: sudo apt-get install -y sshpass
 
-    - name: Deploy code to server
+    - name: Deploy code to server using SSH password
       env:
         HOST: ${{ secrets.SERVER_HOST }}
         USER: ${{ secrets.SERVER_USER }}
-
+        PASSWORD: ${{ secrets.SERVER_PASSWORD }}
       run: |
-        # Transfer code to the server, exclude the media directory to preserve existing files
-        rsync -avz -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" --exclude 'media/' --exclude 'venv/' . $USER@$HOST:/var/www/finesurgicalsnepal/finechangesdone/
+        # Transfer code to the server (excluding media and venv directories)
+        sshpass -p "$PASSWORD" rsync -avz -e "ssh -o StrictHostKeyChecking=no" --exclude 'media/' --exclude 'venv/' . $USER@$HOST:/var/www/finesurgicalsnepal/finechangesdone/
 
-        # SSH into the server for deployment steps
-        ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no $USER@$HOST << 'EOF'
+        # SSH into the server and run deployment steps
+        sshpass -p "$PASSWORD" ssh -o StrictHostKeyChecking=no $USER@$HOST << 'EOF'
         cd /var/www/finesurgicalsnepal/finechangesdone
 
         # Activate virtual environment
