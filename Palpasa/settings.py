@@ -88,7 +88,7 @@ DATABASES = {
     'NAME': 'website',
     'charset': 'utf8mb4',
     'USER': 'root',
-    'PASSWORD': 'ilovenepal123',
+    'PASSWORD': 'S@ndarbha@123',
     'HOST': '',
     'PORT': '',
     'OPTIONS': {
